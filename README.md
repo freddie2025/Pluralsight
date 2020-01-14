@@ -8,6 +8,7 @@
 - Improve Security of an ASP.NET Core Application Using Validation
 - Configuring an ASP.NET Core Application for Security
 - Build a Wishlist Application with ASP.NET Core
+- Add Authentication to an Existing ASP.NET Core Wishlist Application
 
 ## Interactive Courses
 - C# Using Async and Await to Run Code Asynchronously
