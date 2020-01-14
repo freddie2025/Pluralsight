@@ -1,0 +1,45 @@
+﻿@model ConferenceTracker.Entities.Presentation
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Name)</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDateTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndDateTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Speaker)
+        </dt>
+        <dd class = "col-sm-10">
+            <a asp-action="Details" asp-controller="Speakers" asp-route-id="@Model.Speaker.Id">@Html.DisplayFor(model => model.Speaker.FirstName) @Html.DisplayFor(model => model.Speaker.LastName)</a>
+</dd>
+    </dl>
+</div>
+<div>
+    @if (User.IsInRole("Administrator"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> 
+    }
+    <a asp-action="Index">Back to List</a>
+</div>
