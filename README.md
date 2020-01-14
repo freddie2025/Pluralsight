@@ -7,6 +7,7 @@
 - Create a StarChart Web API using ASP.NET Core
 - Improve Security of an ASP.NET Core Application Using Validation
 - Configuring an ASP.NET Core Application for Security
+- Build a Wishlist Application with ASP.NET Core
 
 ## Interactive Courses
 - C# Using Async and Await to Run Code Asynchronously
