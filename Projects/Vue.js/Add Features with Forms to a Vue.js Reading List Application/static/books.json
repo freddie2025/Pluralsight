@@ -1,0 +1,46 @@
+[
+    {
+      "author": "George Orwell",
+      "title": "1984"
+    },
+    {
+        "author": "Stephen Hawking",
+        "title": "A Brief History of Time"
+    },
+    {
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland"
+    },
+    {
+       "author": "Joseph Heller",
+        "title": "Catch-22"
+    },
+    {
+        "author": "Roald Dahl",
+        "title": "Charle and the Chocolate Factory"
+    },
+    {
+        "author": "E.B. White",
+        "title": "Charlotte's Webb"
+    },
+    {
+        "author": "Ray Bradbury",
+        "title": "Fahrenheit 451"
+    },
+    {
+        "author": "Hunter S. Thompson",
+        "title": "Fear and Loathing in Las Vegas"
+    },
+    {
+        "author": "Jared Diamond",
+        "title": "Guns, Germs, and Steel"
+    },
+    {
+        "author": "Kurt Vonnegut",
+        "title": "Slaughterhouse Five"
+    },
+    {
+        "author": "J.R.R. Tolken",
+        "title": "The Lord of the Rings"
+    }
+]

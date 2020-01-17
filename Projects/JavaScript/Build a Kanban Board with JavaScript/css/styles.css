@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #F69C7E;
+}
+
+header, footer {
+  background-color: #F05A28;
+  height: 60px;
+  justify-content: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 36px;
+  padding-top: 10px;
+}
+
+footer span {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.list {
+  width: 250px;
+  border: 1px solid #F69C7E;
+  margin: 20px;
+  border-radius: 10px;
+  color: #F69C7E;
+}
+
+.list .title {
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.list .item {
+  padding: 5px;
+  border-bottom: 1px solid #F69C7E;
+}
+
+.list input, button {
+  color: #F69C7E;
+  margin-left: 5px;
+}
+
+.list button {
+  padding: 2px;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #F69C7E;
+}
+
+.heading .title {
+  width: 200px;
+}
+
+.heading .add {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

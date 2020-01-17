@@ -1,0 +1,31 @@
+{
+  "name": "js-svglibrary",
+  "version": "1.0.0",
+  "description": "Build an SVG Library with Javascript - https://pluralsight.com",
+  "scripts": {
+    "start": "ws --hostname localhost --open",
+    "test": "cross-env NODE_ENV=test mocha './test/*.test.js' || true",
+    "test:module1": "cross-env NODE_ENV=test mocha './test/module1.test.js' || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pluralsight-projects/JS-SVGLibrary"
+  },
+  "author": "Thomas Bell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pluralsight-projects/JS-SVGLibrary/issues"
+  },
+  "homepage": "https://github.com/pluralsight-projects/JS-SVGLibrary#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cross-env": "^5.2.0",
+    "dot-object": "^1.9.0",
+    "jscodeshift": "^0.6.4",
+    "mocha": "^6.2.0"
+  },
+  "devDependencies": {
+    "local-web-server": "^3.0.7"
+  }
+}

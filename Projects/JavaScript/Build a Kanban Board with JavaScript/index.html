@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>PS Kanban Board Project</title>
+</head>
+<body>
+  <header class="flex">
+    <h1>
+      PS Kanban Board
+    </h1>
+  </header>
+  <div class="error"></div>
+  <div class="flex flex-one board">
+    <div class="list drop" id="requested">
+      <div class="heading">
+        <div class="title">Requested</div>
+        <div class="add">+</div>
+      </div>
+    </div>
+    <div class="list drop" id="in-progress">
+      <div class="heading">
+        <div class="title">In Progress</div>
+      </div>
+    </div>
+    <div class="list drop" id="done">
+      <div class="heading">
+        <div class="title">Done</div>
+      </div>
+    </div>
+  </div>
+  <footer class="flex">
+    <span>
+      &copy;2019 Pluralsight
+    </span>
+  </footer>
+  <script src="js/kanban.js"></script>
+</body>
+</html>

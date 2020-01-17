@@ -1,0 +1,52 @@
+{
+  "name": "build-a-quiz-component-with-react",
+  "version": "0.1.1",
+  "private": true,
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace || true",
+    "test:module1": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module1 || true",
+    "test:module2": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module2 || true",
+    "test:module3": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module3 || true",
+    "test:module4": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module4 || true",
+    "test:module5": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module5 || true",
+    "test:module6": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module6 || true",
+    "test:module7": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace module7 || true",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "babylon": "6.18.0",
+    "chai": "4.1.2",
+    "chai-enzyme": "0.8.0",
+    "cross-env": "5.1.4",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "esprima": "4.0.0",
+    "react-test-renderer": "16.3.1",
+    "sinon": "5.0.1"
+  }
+}
