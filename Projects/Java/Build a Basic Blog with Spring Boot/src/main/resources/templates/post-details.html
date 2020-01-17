@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script th:src="@{/js/modernizr-2.8.3-respond-1.4.2.min.js}"></script>
+</head>
+
+<body>
+<div th:replace="header :: header">...</div>
+
+<main role="main" class="py-5 flex-fill">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron jumbotron-cover-image"
+                     style='background: #000 url("https://picsum.photos/id/1/800/400") center center; background-size: cover; padding: 8rem;'>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-sm-12 post-heading">
+                <h1 class="post-title" th:text="${post.getTitle()}"></h1>
+                <h3 class="post-subtitle">Author</h3>
+                <h3 class="post-subtitle">Date</h3>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-md-8 post-body">
+                Body placeholder ...
+            </div>
+            <aside class="col-md-4 pl-5">
+                <div class="py-3 mb-3 bg-white rounded">
+                    <div class="card-title">About the Author</div>
+                    <img class="card-img-top"  src="https://randomuser.me/api/portraits/lego/9.jpg" alt="${post.getAuthor()}">
+                    <div class="card-body py-4">
+                        <p class="card-author-bio">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                        <a href="#" class=""><div class="card-author-link">Read More</div></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/vendor/jquery-slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

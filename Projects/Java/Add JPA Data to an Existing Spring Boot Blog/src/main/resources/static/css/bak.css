@@ -1,0 +1,119 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar .navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar .navbar-brand img {
+  height: 45px;
+
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+
+    /* the rest of your styling */
+}
+
+
+
+.blog {
+  margin: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+  .blog__header {
+    text-align: center; }
+
+  .blog__header1 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: .2px;
+    text-transform: uppercase; }
+  .blog__header2 {
+    margin-top: .3rem;
+    font-size: 1.4rem;
+    font-weight: 500; }
+  .blog__header2Span {
+    font-weight: 400;
+    font-size: 1.25rem; }
+  .blog__slider {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .blog__post {
+    margin: 3rem 1rem;
+    width: 25%;
+    -webkit-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4); }
+  .blog__topImg {
+    max-width: 100%; }
+  .blog__content {
+    padding: .8rem; }
+  .blog__preview {
+    font-size: .95rem;
+    font-weight: 300; }
+
+  .blog__title {
+    margin-top: 0;
+    font-size: 1.6rem;
+    }
+
+  .blog__intro {
+    line-height: 1.5; }
+  .blog__info {
+    font-weight: 300; }
+  .blog__author {
+    font-size: 1.1rem; }
+  .blog__date {
+    font-size: 1rem; }
+  .blog__counter {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; }
+  .blog__counterItem {
+    height: 20px;
+    width: 20px;
+    margin: .5rem;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 25px; }
+    .blog__counterItem:hover {
+      cursor: pointer; }
+  .blog__counterItem-active {
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    }
+
+
+
+.imgtitle {
+    position: absolute !important;
+    margin-top: 0 !important;
+    font-size: 1.6rem !important;
+        top: 24px !important;
+        right: 16px !important;
+        left: 48px !important;
+}
+
+.img_container {
+    position: relative !important;
+    text-align: center !important;
+    color: white !important;
+}

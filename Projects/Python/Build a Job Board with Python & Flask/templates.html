@@ -1,0 +1,119 @@
+<!-- templates/layout.html -->
+<!doctype html>
+<html>
+  <head>
+    <title>Job Board</title>
+  </head>
+  <body>
+    <div class="container top">
+      <div class="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- templates/_marcos.html -->
+<!-- show_job -->
+<div class="card adjust-height">
+  <header class="card-header">
+    <p class="card-header-title">
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+    </div>
+  </div>
+</div>
+
+<!-- templates/index.html -->
+{% block content %}
+  <div class="columns">
+    <div class="column">
+      <h1>Jobs</h1>
+    </div>
+    <div class="column is-one-fifth">
+    </div>
+  </div>
+{% endblock %}
+
+<!-- templates/employer.html -->
+{% block content %}
+  <h2>Jobs</h2>
+
+  <h2>Reviews</h2>
+    {# TODO: Remove comment and add for loop
+      {% %}
+    #}
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+        </div>
+        <div class="media-content">
+          <div class="content">
+          </div>
+        </div>
+      </article>
+    </div>
+    {# TODO: Remove comment and end for loop
+      {% %}
+    #}
+  <div class="columns">
+    <div class="column">
+      <a class="button is-info is-pulled-right">Create Review</a>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- templates/review.html -->
+{% block content %}
+  <h1>New Review</h1>
+  <form method="post">
+    <div class="field">
+      <label class="label">Job Title</label>
+      <div class="control">
+        <input class="input" type="text" name="title" id="title" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Rating</label>
+      <div class="control">
+        <div class="select">
+          <select name="rating" id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Review</label>
+      <div class="control">
+        <textarea class="textarea" name="review" id="review" required></textarea>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Employment Status</label>
+      <div class="control">
+        <div class="select">
+          <select name="status" id="status">
+            <option value="former">Former</option>
+            <option value="current">Current</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <a class="button is-text">Cancel</a>
+      </div>
+    </div>
+  </form>
+{% endblock %}

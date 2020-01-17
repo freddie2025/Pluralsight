@@ -1,0 +1,22 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+<div class="card main">
+  <header class="card-header">
+    <p class="card-header-title">Users</p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <table class="table is-striped">
+        <tbody>
+          {% for user in users %}
+            <tr>
+              <td>{{ user.username }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

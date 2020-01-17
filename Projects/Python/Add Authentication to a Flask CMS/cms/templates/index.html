@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PS DEMO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/theme.css') }}">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item brand-text" href="/">PS DEMO</a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            {% for title in titles %}
+              <a class="navbar-item" href="{{ url_for('index', slug=title.slug) }}">{{ title.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-12">
+          {{ content.body }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

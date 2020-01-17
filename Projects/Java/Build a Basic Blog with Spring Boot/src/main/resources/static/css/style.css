@@ -1,0 +1,189 @@
+
+.form-control[readonly] {
+    background-color: white;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/GothamMedium.ttf);
+}
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/GothamBold.ttf);
+    font-variant: Bold;
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/GothamBook.ttf);
+}
+
+@media (min-width: 1200px) {
+.container {
+        max-width: 73%;
+}
+.card-columns {
+    column-gap: 3rem;
+}
+}
+
+body {
+   min-height:100vh;
+   background: #F0F0F0 0% 0% no-repeat padding-box;
+}
+
+
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  footer p {
+    margin-bottom: .25rem;
+  }
+
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  .card-title {
+    /*height: 24px;*/
+  text-align: center;
+  font: 24px/34px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+  margin-bottom: 21px
+  }
+
+  .card-text {
+    /*height: 76px;*/
+    text-align: center;
+    font: 16px/22px Gotham;
+    letter-spacing: 0;
+    color: #454545;
+    opacity: 1;
+  }
+  .card-subtext {
+    /*height: 12px;*/
+    text-align: center;
+  }
+
+  .card-subtext a {
+    font: 12px/26px Gotham;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: #B5B5B5;
+    opacity: 1;
+  }
+
+  .navbar {
+    background-color: #5e8e96;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navbar .navbar-brand {
+    color: #ecf0f1;
+  }
+  .navbar .navbar-brand:hover,
+  .navbar .navbar-brand:focus {
+    color: #ecf0f1;
+  }
+  .navbar .navbar-text {
+    color: #ecf0f1;
+  }
+  .navbar .navbar-text a {
+    color: #ecf0f1;
+  }
+  .nav-item a {
+    color: #ecf0f1;
+  }
+
+  .nav-item a:hover,
+   .nav-item a:focus{
+      color: #bbbbbb;
+      text-decoration: none;
+    }
+
+
+  .navbar .navbar-text a:hover,
+  .navbar .navbar-text a:focus {
+    color: #ecf0f1;
+  }
+
+  .navbar .navbar-nav .nav-link:not(.disabled):hover,
+  .navbar .navbar-nav .nav-link:not(.disabled):focus {
+    color: #ecf0f1;
+  }
+
+  .navbar-nav{
+    padding-right: 50px;
+  }
+
+  .nav-item {
+    padding-right: 50px;
+  }
+
+  .nav-link {
+    text-align: center;
+    font: Bold 15px/21px Gotham;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+    text-transform: uppercase;
+  }
+
+  .navbar-brand {
+    padding-left: 50px;
+    font: Bold 29px/41px Gotham;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+.author-image-thumb {
+    background: transparent url('img/about the author.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.card-author-bio {
+    text-align: left;
+    font: 18px/28px GothamBook;
+    letter-spacing: 0;
+    color: #434343;
+    opacity: 1;
+}
+.card-author-link {
+    text-align: left;
+    font: 16px/26px Gotham;
+    letter-spacing: 0;
+    color: #D98E8E;
+    opacity: 1;
+    text-transform: uppercase;
+}
+.post-subtitle {
+    font: 18px/26px Gotham;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: #7E7E7E;
+    opacity: 1;
+  }
+.post-title {
+    text-align: left;
+    font: 38px/34px Gotham;
+    letter-spacing: 0;
+    color: #2F2F2F;
+    opacity: 1;
+}
+
+.post-body {
+    text-align: left;
+    font: 24px/39px GothamBook;
+    letter-spacing: 0;
+    color: #434343;
+    opacity: 1;
+}
+
+
+
+
+
+

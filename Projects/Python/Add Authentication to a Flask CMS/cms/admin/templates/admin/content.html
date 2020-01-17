@@ -1,0 +1,28 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+<div class="card main">
+  <header class="card-header">
+    <p class="card-header-title">{{ type|capitalize|pluralize }}</p>
+    <a href="{{ url_for('admin.create', type=type) }}" class="card-header-icon" aria-label="create">
+      <span class="icon has-text-primary">
+        <i class="fas fa-lg fa-plus-circle" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <table class="table is-striped">
+        <tbody>
+          {% for item in content %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td><a class="button is-small is-primary is-pulled-right" href="{{url_for('admin.edit', id=item.id)}}">Edit</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
