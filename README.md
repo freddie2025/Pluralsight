@@ -25,3 +25,4 @@
 
 ## Courses
 - SOLID Principles for C# Developers
+- CQRS in Practice
