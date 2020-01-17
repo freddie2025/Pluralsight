@@ -24,3 +24,4 @@
 - C# Using Variables and Conditionals
 
 ## Courses
+- SOLID Principles for C# Developers
