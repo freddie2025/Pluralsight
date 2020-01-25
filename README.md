@@ -26,3 +26,6 @@
 ## Courses
 - SOLID Principles for C# Developers
 - CQRS in Practice
+- Getting Started with Dependency Injection in .NET
+- C# Interfaces
+- Clean Architecture Patterns, Practices, and Principles

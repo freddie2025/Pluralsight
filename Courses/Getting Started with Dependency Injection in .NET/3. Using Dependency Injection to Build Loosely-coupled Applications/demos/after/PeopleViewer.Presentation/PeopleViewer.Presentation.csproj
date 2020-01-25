@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PeopleViewer.Common\PeopleViewer.Common.csproj" />
+    <ProjectReference Include="..\PersonDataReader.Service\PersonDataReader.Service.csproj" />
+  </ItemGroup>
+
+</Project>

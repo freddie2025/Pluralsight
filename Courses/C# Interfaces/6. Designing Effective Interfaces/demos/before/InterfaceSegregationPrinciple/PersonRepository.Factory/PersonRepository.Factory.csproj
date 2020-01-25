@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PersonRepository.CSV\PersonRepository.CSV.csproj" />
+    <ProjectReference Include="..\PersonRepository.Interface\PersonRepository.Interface.csproj" />
+    <ProjectReference Include="..\PersonRepository.Service\PersonRepository.Service.csproj" />
+    <ProjectReference Include="..\PersonRepository.SQL\PersonRepository.SQL.csproj" />
+  </ItemGroup>
+
+</Project>
