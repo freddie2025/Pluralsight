@@ -1,0 +1,80 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = $"Sessions for {Model.Speaker.Name}";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sessions for @Model.Speaker.Name</h1>
+    <div>
+        @{
+            var daysUntilBirthday = Model.GetDaysUntilNextBirthday();
+
+            if (daysUntilBirthday == 0)
+            {
+                <h3>HAPPY BIRTHDAY!!</h3>
+            }
+            else
+            {
+                <h3>Don't forget to congratulate the speaker in @daysUntilBirthday days!</h3>
+            }
+            <h4>@Model.Speaker.Name is @Model.GetSpeakerAge() years old</h4>
+        }
+    </div>
+    @if (Model.Speaker.Sessions.Any())
+    {
+        foreach (var session in Model.Speaker.Sessions.OrderBy(session => session.ScheduledAt))
+        {
+            var sessionOverlapping = Model.IsSessionOverlapping(session);
+
+            <div style="padding: 10px; margin: 10px; background: @(sessionOverlapping ? "red" : "#efefef")">
+                <div>
+                    <h2>@session.Title</h2>
+                    <h3>@session.ScheduledAt.ToString("HH:mm tt") - @session.ScheduledAt.Add(session.Length).ToString("HH:mm tt")</h3>
+                    <h4>Submitted at @session.SubmittedAt (@Math.Round(Math.Abs(Model.TimeSinceSubmission(session).TotalDays)) days ago)</h4>
+                    <p>@session.Abstract</p>
+                </div>
+
+                <div class="small">
+                    @if (sessionOverlapping)
+                    {
+                        <p><strong>WARNING: SESSION OVERLAPPING</strong></p>
+                    }
+
+                    @if (Model.DoesSpeakerHaveEarlierSessions(session))
+                    {
+                        <p><strong>Speaker has one or more sessions prior to this</strong></p>
+                    }
+
+                    @if (Model.DoesSpeakerHaveLaterSessions(session))
+                    {
+                        <p><strong>Speaker has one or more sessions after to this</strong></p>
+                    }
+                </div>
+            </div>
+            <div>
+                @{
+                    var timeUntilNextSession = Model.GetTimeUntilNextSession(session);
+                }
+                @if (timeUntilNextSession != TimeSpan.MinValue)
+                {
+                    if (session.ScheduledAt.DayOfYear < session.ScheduledAt.Add(timeUntilNextSession).DayOfYear)
+                    {
+                        <p>Session starts again tomorrow.</p>
+                    }
+                    else
+                    {
+                        <p>Time until next session: @timeUntilNextSession</p>
+                    }
+                }
+            </div>
+        }
+    }
+    else
+    {
+        <div>Speaker has no scheduled sessions</div>
+    }
+</div>
+<div>
+    <a href="/Download/Index?id=@Model.Speaker.Id">Download @Model.Speaker.Name's sessions</a>
+</div>

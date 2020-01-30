@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionBuilder.Web", "SessionBuilder.Web\SessionBuilder.Web.csproj", "{22DE3768-5D81-4781-9763-189B1D42A7C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionBuilder.Core", "SessionBuilder.Core\SessionBuilder.Core.csproj", "{187A5136-456E-4881-BBED-929682FC4D4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22DE3768-5D81-4781-9763-189B1D42A7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DE3768-5D81-4781-9763-189B1D42A7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DE3768-5D81-4781-9763-189B1D42A7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DE3768-5D81-4781-9763-189B1D42A7C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187A5136-456E-4881-BBED-929682FC4D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187A5136-456E-4881-BBED-929682FC4D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187A5136-456E-4881-BBED-929682FC4D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187A5136-456E-4881-BBED-929682FC4D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10C5E8AD-B6F5-4C06-BFD5-327AFC190432}
+	EndGlobalSection
+EndGlobal

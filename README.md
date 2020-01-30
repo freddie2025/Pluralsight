@@ -23,9 +23,16 @@
 - C# Using LINQ Queries & Operators
 - C# Using Variables and Conditionals
 
-## Courses
-- SOLID Principles for C# Developers
-- CQRS in Practice
-- Getting Started with Dependency Injection in .NET
+## Paths
+### Building Web Applications with Blazor Path
+- Blazor The Big Picture
+### C#
+- Dates and Times in .NET
 - C# Interfaces
+### C# Application Practices
 - Clean Architecture Patterns, Practices, and Principles
+- Getting Started with Dependency Injection in .NET
+### C# Coding Practices
+- SOLID Principles for C# Developers
+### Misc
+- CQRS in Practice

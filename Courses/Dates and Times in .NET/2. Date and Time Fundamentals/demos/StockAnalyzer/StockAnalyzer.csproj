@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>StockAnalyzer</AssemblyName>
+    <RootNamespace>StockAnalyzer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="StockData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
