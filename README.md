@@ -34,5 +34,6 @@
 - Getting Started with Dependency Injection in .NET
 ### C# Coding Practices
 - SOLID Principles for C# Developers
-### Misc
+
+## Courses
 - CQRS in Practice
