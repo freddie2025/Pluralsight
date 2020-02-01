@@ -1,0 +1,6 @@
+OrderNumber,CustomerNumber,Description,Quantity
+42, 100001, Shirt, II
+43, 200002, Shorts, I
+@ This is a comment
+
+44, 300003, Cap, V

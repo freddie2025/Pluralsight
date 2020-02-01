@@ -1,0 +1,2 @@
+https://github.com/JoshClose/CsvHelper
+https://www.nuget.org/packages/CsvHelper

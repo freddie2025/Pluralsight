@@ -1,0 +1,4 @@
+﻿OrderNumber,Customer,Amount
+42,100001,2
+43,200002,1
+44,300003,5

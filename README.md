@@ -26,9 +26,12 @@
 ## Paths
 ### Building Web Applications with Blazor Path
 - Blazor The Big Picture
+### .NET Base Class Library Path
+- Working with Files and Streams in C#
 ### C#
 - Dates and Times in .NET
 - C# Interfaces
+<!-- - Working with Nulls in C# -->
 ### C# Application Practices
 - Clean Architecture Patterns, Practices, and Principles
 - Getting Started with Dependency Injection in .NET
