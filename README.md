@@ -37,6 +37,8 @@
 - Getting Started with Dependency Injection in .NET
 ### C# Coding Practices
 - SOLID Principles for C# Developers
+### Microsoft Power BI for Analysts
+- Building Your First Power BI Report
 
 ## Courses
 - CQRS in Practice
