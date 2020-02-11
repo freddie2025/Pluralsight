@@ -31,7 +31,7 @@
 ### C#
 - Dates and Times in .NET
 - C# Interfaces
-<!-- - Working with Nulls in C# -->
+- Working with Nulls in C#
 ### C# Application Practices
 - Clean Architecture Patterns, Practices, and Principles
 - Getting Started with Dependency Injection in .NET
