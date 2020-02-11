@@ -39,6 +39,8 @@
 - SOLID Principles for C# Developers
 ### Microsoft Power BI for Analysts
 - Building Your First Power BI Report
+### ASP.NET MVC 5
+- Getting Started with ASP.NET SignalR
 
 ## Courses
 - CQRS in Practice

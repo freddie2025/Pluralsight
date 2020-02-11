@@ -1,0 +1,22 @@
+﻿<Window x:Class="WiredBrain.Orders.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WiredBrain.Orders"
+        mc:Ignorable="d"
+        Title="Order overview" Height="450" Width="800">
+    <StackPanel Margin="0,0,135,0">
+        <ListView HorizontalAlignment = "Left" Height = "auto" Margin = "10,10,-121.8,0" 
+                  VerticalAlignment = "Top" x:Name = "OrderList" FontSize="24" Background="#FFF7A2A2" Width="531">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header = "Order Id" DisplayMemberBinding="{Binding OrderId}" Width = "150"/>
+                    <GridViewColumn Header = "Status" DisplayMemberBinding="{Binding Update}" Width = "350"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+    </StackPanel>
+</Window>

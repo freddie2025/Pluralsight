@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrain", "WiredBrain\WiredBrain.csproj", "{60F19EA6-4D16-4ED1-B9A7-7BC5F621A5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrain.Orders", "WiredBrain.Orders\WiredBrain.Orders.csproj", "{9CDC665B-9C06-4D3A-B597-E09BA7928363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60F19EA6-4D16-4ED1-B9A7-7BC5F621A5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F19EA6-4D16-4ED1-B9A7-7BC5F621A5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F19EA6-4D16-4ED1-B9A7-7BC5F621A5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F19EA6-4D16-4ED1-B9A7-7BC5F621A5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDC665B-9C06-4D3A-B597-E09BA7928363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDC665B-9C06-4D3A-B597-E09BA7928363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDC665B-9C06-4D3A-B597-E09BA7928363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDC665B-9C06-4D3A-B597-E09BA7928363}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02A856A9-2BEE-4D51-A3AB-3B1FBF295634}
+	EndGlobalSection
+EndGlobal
