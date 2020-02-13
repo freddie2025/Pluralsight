@@ -42,7 +42,7 @@
 ### ASP.NET MVC 5
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
 ### .NET Developer on Microsoft Azure Path
-[Microsoft Azure for .NET Developers - Building Secure Services and Applications]()
+[Microsoft Azure for .NET Developers - Building Secure Services and Applications](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Azure%20Building%20Secure%20Services%20and%20Applications)
 
 <!-- ## Courses
 [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  -->
