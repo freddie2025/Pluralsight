@@ -41,6 +41,8 @@
 [Building Your First Power BI Report](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20Power%20BI%20Report)  
 ### ASP.NET MVC 5
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
+### .NET Developer on Microsoft Azure Path
+[Microsoft Azure for .NET Developers - Building Secure Services and Applications]()
 
-## Courses
-[CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
+<!-- ## Courses
+[CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  -->

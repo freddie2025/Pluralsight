@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3>Pricing API Says:</h3>
+<ul>
+    @foreach(var value in Model.Values)
+    {
+        <li>@value</li>
+    }
+</ul>

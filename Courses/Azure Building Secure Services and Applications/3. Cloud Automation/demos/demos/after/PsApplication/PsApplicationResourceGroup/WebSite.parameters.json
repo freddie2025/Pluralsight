@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "PsApplicationPlan"
+    },
+    "skuName": {
+      "value": "B1"
+    },
+    "secretValue": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/63ffaf6b-218c-43f6-9375-08c1ba9cb6c2/resourceGroups/pskeyvault3/providers/Microsoft.KeyVault/vaults/pskeyvault3"
+        },
+        "secretName": "Secret"
+      } 
+    }
+  }
+}

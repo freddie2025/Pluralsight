@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+
+  psmoviestore:
+    image: psregistry2.azurecr.io/psmoviestore
+    build:
+      context: .
+      dockerfile: PsMovieStore/Dockerfile
+    depends_on:
+      - "pspricingapi"
+    ports:
+      - "80:80"
+
+  pspricingapi:
+    image: psregistry2.azurecr.io/pspricingapi
+    build:
+      context: .
+      dockerfile: PsPricingApi/Dockerfile
+
+

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsMovieStoreAuth", "PsMovieStoreAuth\PsMovieStoreAuth.csproj", "{69FB535E-719D-4058-892A-4D3654B068F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsPricingApiAuth", "PsPricingApiAuth\PsPricingApiAuth.csproj", "{08A4D98B-FF0E-448F-9311-DC2A33DF9C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsMovieStoreB2C", "PsMovieStoreB2C\PsMovieStoreB2C.csproj", "{0231FB27-0682-4FE1-A456-3E79218F09D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69FB535E-719D-4058-892A-4D3654B068F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FB535E-719D-4058-892A-4D3654B068F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FB535E-719D-4058-892A-4D3654B068F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FB535E-719D-4058-892A-4D3654B068F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A4D98B-FF0E-448F-9311-DC2A33DF9C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A4D98B-FF0E-448F-9311-DC2A33DF9C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A4D98B-FF0E-448F-9311-DC2A33DF9C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A4D98B-FF0E-448F-9311-DC2A33DF9C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0231FB27-0682-4FE1-A456-3E79218F09D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0231FB27-0682-4FE1-A456-3E79218F09D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0231FB27-0682-4FE1-A456-3E79218F09D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0231FB27-0682-4FE1-A456-3E79218F09D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E4D1E87-6DB9-4C8F-A6BC-256FDAA4D2D0}
+	EndGlobalSection
+EndGlobal
