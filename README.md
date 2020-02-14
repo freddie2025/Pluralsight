@@ -28,7 +28,7 @@
 [Blazor The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Blazor%20The%20Big%20Picture/What%20Is%20Blazor%20and%20How%20Does%20It%20Work)  
 ### .NET Base Class Library Path
 [Working with Files and Streams in C#](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Working%20with%20Files%20and%20Streams%20in%20C%23)  
-[Using HttpClient to Consume APIs in .NET Core]()  
+[Using HttpClient to Consume APIs in .NET Core](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Using%20HttpClient%20to%20Consume%20APIs%20in%20.NET%20Core)  
 ### C#
 [Dates and Times in .NET](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Dates%20and%20Times%20in%20.NET)  
 [C# Interfaces](https://github.com/freddie2025/Pluralsight/tree/master/Courses/C%23%20Interfaces)  
