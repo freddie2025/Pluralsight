@@ -40,6 +40,7 @@
 [SOLID Principles for C# Developers](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SOLID%20Principles%20for%20C%23%20Developers)  
 ### Microsoft Power BI for Analysts
 [Building Your First Power BI Report](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20Power%20BI%20Report)  
+[Getting Started with DAX Formulas in Power BI, Power Pivot, and SSAS]()  
 ### ASP.NET MVC 5
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
 ### .NET Developer on Microsoft Azure Path
