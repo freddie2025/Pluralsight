@@ -48,4 +48,5 @@
 
 ## Courses
 [SQL Server Reporting Services Playbook]()  
+[Analysis Services Fundamentals]()  
 <!-- [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  -->
