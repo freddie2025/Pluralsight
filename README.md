@@ -1,5 +1,5 @@
 # Pluralsight
- A repository for pluralsight course material and projects
+A repository for pluralsight course material and projects
 
 ## Projects
 
@@ -45,8 +45,11 @@
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
 ### .NET Developer on Microsoft Azure Path
 [Microsoft Azure for .NET Developers - Building Secure Services and Applications](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Azure%20Building%20Secure%20Services%20and%20Applications)
+### Domain-Driven Design
+[Clean Architecture Patterns, Practices, and Principles](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Clean%20Architecture%20Patterns%2C%20Practices%2C%20and%20Principles)  
+[Modern Software Architecture: Domain Models, CQRS, and Event Sourcing]()  
+[CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
 
 ## Courses
 [SQL Server Reporting Services Playbook]()  
 [Analysis Services Fundamentals]()  
-<!-- [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  -->
