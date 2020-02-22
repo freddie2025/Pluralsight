@@ -51,5 +51,7 @@ A repository for pluralsight course material and projects
 [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
 
 ## Courses
-[SQL Server Reporting Services Playbook]()  
-[Analysis Services Fundamentals]()  
+[SQL Server Reporting Services Playbook](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SQL%20Server%20Reporting%20Services%20Playbook)  
+[Analysis Services Fundamentals](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Analysis%20Services%20Fundamentals)  
+[Choosing between Multidimensional and Tabular Models in SSAS](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Choosing%20between%20Multidimensional%20and%20Tabular%20Models%20in%20SSAS)  
+[Designing a Data Warehouse on the Microsoft SQL Server Platform](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Designing%20a%20Data%20Warehouse%20on%20the%20Microsoft%20SQL%20Server%20Platform)  
