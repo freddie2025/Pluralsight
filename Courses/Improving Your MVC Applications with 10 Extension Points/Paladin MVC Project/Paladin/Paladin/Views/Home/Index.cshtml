@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+ <!-- Heading Row -->
+<div class="row">
+    <div class="col-md-8">
+        <img class="img-responsive img-rounded" src="~/Images/Banner.jpg" alt="">
+    </div>
+    <!-- /.col-md-8 -->
+    <div class="col-md-4">
+        <h1>Paladin Insurance</h1>
+        <h3>We're waging war on high premiums, fine print, and difficult claims.</h3>
+        @Html.ActionLink("Join the Fight", "ApplicantInfo", "Applicant", null, new { @class = "btn btn-primary btn-lg" })
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
+<hr>
+<!-- Call to Action Well -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="well text-center">
+            @Html.ValidationSummary()
+            <h4>Our Promise: We will never stop fighting for our customers. <a href="#">Click here</a> to learn what this means for you.</h4>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<!-- Content Row -->
+<div class="row">
+    <div class="col-md-4">
+        <h2>Protect Your Home</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+        <a class="btn btn-default" href="#">More Info</a>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-4">
+        <h2>Protect Your Vehicle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+        <a class="btn btn-default" href="#">More Info</a>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-4">
+        <h2>Protect Your Family</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
+        <a class="btn btn-default" href="#">More Info</a>
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->

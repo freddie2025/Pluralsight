@@ -1,0 +1,105 @@
+﻿@model Paladin.Models.Progress
+
+<div class="col-md-2">
+    @*@if (Model.HighestStage >= (int)WorkflowValues.ApplicantInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.ApplicantInfo)
+        {
+            @Html.ActionLink("Personal", "ApplicantInfo", "Applicant", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Personal", "ApplicantInfo", "Applicant", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Personal</span>
+    }*@
+    @Html.WorkflowActionLink("ApplicantInfo", "Applicant", (int)WorkflowValues.ApplicantInfo, Model.CurrentStage, Model.HighestStage, "Applicant")
+</div>
+<div class="col-md-2">
+    @if (Model.HighestStage >= (int)WorkflowValues.ApplicantInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.AddressInfo)
+        {
+            @Html.ActionLink("Address", "AddressInfo", "Address", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Address", "AddressInfo", "Address", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Address</span>
+    }
+</div>
+<div class="col-md-2">
+    @if (Model.HighestStage >= (int)WorkflowValues.AddressInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.EmploymentInfo)
+        {
+            @Html.ActionLink("Employment", "EmploymentInfo", "Employment", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Employment", "EmploymentInfo", "Employment", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Employment</span>
+    }
+</div>
+<div class="col-md-2">
+    @if (Model.HighestStage >= (int)WorkflowValues.EmploymentInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.VehicleInfo)
+        {
+            @Html.ActionLink("Vehicle", "VehicleInfo", "Employment", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Vehicle", "VehicleInfo", "Vehicle", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Vehicle</span>
+    }
+</div>
+<div class="col-md-2">
+    @if (Model.HighestStage >= (int)WorkflowValues.VehicleInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.ProductInfo)
+        {
+            @Html.ActionLink("Products", "ProductInfo", "Products", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Products", "ProductInfo", "Products", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Products</span>
+    }
+</div>
+<div class="col-md-2">
+    @if (Model.HighestStage >= (int)WorkflowValues.ProductInfo)
+    {
+        if (Model.CurrentStage == (int)WorkflowValues.Final)
+        {
+            @Html.ActionLink("Final", "Final", "Home", null, new { @class = "btn btn-progress btn-progress-active" })
+        }
+        else
+        {
+            @Html.ActionLink("Final", "Final", "Home", null, new { @class = "btn btn-progress" })
+        }
+    }
+    else
+    {
+        <span class="btn btn-progress">Final</span>
+    }
+</div>

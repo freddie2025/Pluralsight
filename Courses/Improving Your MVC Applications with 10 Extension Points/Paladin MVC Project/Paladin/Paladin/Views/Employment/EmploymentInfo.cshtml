@@ -1,0 +1,85 @@
+﻿@model Paladin.ViewModels.Employments
+@{
+    ViewBag.Title = "Index";
+}
+@section ProgressBar{
+    @Html.Action("ProgressBar", "Home", new { currentStage = (int)WorkflowValues.EmploymentInfo })
+}
+<div class="col-md-12">
+    <h2 class="page-header">What do you do?<small style="margin-left: 25px">Let your hard work pay off!</small></h2>
+</div>
+<div class="applicant-info">
+    @using (Html.BeginForm("EmploymentInfo", "Employment", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="col-md-12">
+            @Html.ValidationSummary()
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Employment Info</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @{
+        var employmentTypes = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "Full Time", Value = "1" },
+                                new SelectListItem(){ Text = "Part Time", Value = "2" },
+                                new SelectListItem(){ Text = "Unemployed", Value = "3" },
+                                new SelectListItem(){ Text = "Retired", Value = "4" }
+                            };
+                        }
+
+                        @Html.LabelFor(x => x.PrimaryEmployer.EmploymentType)
+                        @Html.DropDownListFor(x => x.PrimaryEmployer.EmploymentType, employmentTypes, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PrimaryEmployer.Employer)
+                        @Html.TextBoxFor(x => x.PrimaryEmployer.Employer, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PrimaryEmployer.Position)
+                        @Html.TextBoxFor(x => x.PrimaryEmployer.Position, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PrimaryEmployer.GrossMonthlyIncome)
+                        @Html.TextBoxFor(x => x.PrimaryEmployer.GrossMonthlyIncome, new { @class = "form-control required digits" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PrimaryEmployer.StartDate)
+                        @Html.TextBoxFor(x => x.PrimaryEmployer.StartDate, new { @Value = Model.PrimaryEmployer.StartDate.HasValue ? Model.PrimaryEmployer.StartDate.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker required" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Previous Employment Info</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PreviousEmployer.EmploymentType)
+                        @Html.DropDownListFor(x => x.PreviousEmployer.EmploymentType, employmentTypes, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PreviousEmployer.Employer)
+                        @Html.TextBoxFor(x => x.PreviousEmployer.Employer, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PreviousEmployer.Position)
+                        @Html.TextBoxFor(x => x.PreviousEmployer.Position, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PreviousEmployer.GrossMonthlyIncome)
+                        @Html.TextBoxFor(x => x.PreviousEmployer.GrossMonthlyIncome, new { @class = "form-control required digits" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PreviousEmployer.StartDate)
+                        @Html.TextBoxFor(x => x.PreviousEmployer.StartDate, new { @Value = Model.PreviousEmployer.StartDate.HasValue ? Model.PreviousEmployer.StartDate.Value.ToString("MM/dd/yyyy") : "" , @class = "form-control datepicker-alt required" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="submit" class="btn btn-primary pull-right" value="Let's go!'" />
+        </div>
+
+    }
+</div>

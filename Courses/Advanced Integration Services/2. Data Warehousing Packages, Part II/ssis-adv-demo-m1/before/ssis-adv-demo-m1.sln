@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ssis-adv-demo-m1", "ssis-adv-demo-m1\ssis-adv-demo-m1.dtproj", "{746C5BA9-3E7E-4F6A-9910-B69798FD9FB5}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "ssis-adv-demo-ssas-m1", "ssis-adv-demo-ssas-m1\ssis-adv-demo-ssas-m1.dwproj", "{BA5F2904-3BD6-4CE9-88DA-694240D5AA49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{746C5BA9-3E7E-4F6A-9910-B69798FD9FB5}.Development|Default.ActiveCfg = Development
+		{746C5BA9-3E7E-4F6A-9910-B69798FD9FB5}.Development|Default.Build.0 = Development
+		{BA5F2904-3BD6-4CE9-88DA-694240D5AA49}.Development|Default.ActiveCfg = Development
+		{BA5F2904-3BD6-4CE9-88DA-694240D5AA49}.Development|Default.Build.0 = Development
+		{BA5F2904-3BD6-4CE9-88DA-694240D5AA49}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

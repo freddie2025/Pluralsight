@@ -1,0 +1,2389 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2013 6:18:15 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DENALI01"
+  DTS:CreatorName="ADVENTUREWORKS\administrator"
+  DTS:DTSID="{4E586D50-EEAD-4A2B-A240-6AF1182FA9D7}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="01-05-sales-header-extract"
+  DTS:PackageType="5"
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{EEABA23D-E1A6-4D8A-A7EB-26FD08857816}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[stageError]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A42668C5-6B5A-476F-B15E-EF888D5F2D6A}"
+      DTS:ObjectName="stageError">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"C:\\ssis-adv-data\\errors\\" +  @[User::TableName]  + "Error.txt"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis-adv-data\errors\stageSalesHeaderError.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rowguid"
+              DTS:DTSID="{CCB0A0D5-F17D-4932-B0D3-2F3D8CCF3130}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{48D2361E-6883-4B6D-B6DF-6B8D8F684221}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{14FA2A5F-BE68-4306-AEED-6E608B326F10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{FF7C5A22-B953-483D-845B-4ED9B77EEC1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RevisionNumber"
+              DTS:DTSID="{CCA9FF64-5E9B-474D-9C00-3D2664EA83CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderDate"
+              DTS:DTSID="{3FF4DDFF-AFCD-44A9-91E6-060BA3D62BB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DueDate"
+              DTS:DTSID="{FECD37FC-1636-4E99-942A-27E77CDEE3A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ShipDate"
+              DTS:DTSID="{1D49D582-0FFF-48B8-BCB4-F08448841DCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{D292143C-8E00-4C9D-B79E-BD1068D3AFD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OnlineOrderFlag"
+              DTS:DTSID="{71AFA0D6-AE4F-43F6-B37D-81D43CB9DD31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderNumber"
+              DTS:DTSID="{FEDA87A5-50A6-4FE3-8FC8-39DABDD62F03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PurchaseOrderNumber"
+              DTS:DTSID="{12B22DE6-C3E2-4C36-823E-8F992AA11DC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AccountNumber"
+              DTS:DTSID="{586F92D1-C517-4764-8C36-ED897EADC9EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{27D2892A-19CE-4717-868E-ACC7F0290BCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesPersonID"
+              DTS:DTSID="{D4BB46C4-E298-4F68-A388-D2B94C0D70A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BillToAddressID"
+              DTS:DTSID="{EF09E4C8-D7F6-4C48-8F90-2793D53051A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ShipToAddressID"
+              DTS:DTSID="{B23E0F3A-1A6C-4E6B-893D-D1E26549A2C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ShipMethodID"
+              DTS:DTSID="{358EBEE9-077A-4B0C-A291-CCF3F50C2BA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CreditCardID"
+              DTS:DTSID="{08071764-831D-449C-A31F-573A81F65942}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CreditCardApprovalCode"
+              DTS:DTSID="{95C68709-7F5E-406C-9C9A-79E427B0C57D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyRateID"
+              DTS:DTSID="{4F1B6316-E539-4598-8449-82BFCCF23D72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubTotal"
+              DTS:DTSID="{68A2CAC7-4740-4F33-863A-1D97B136534C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxAmt"
+              DTS:DTSID="{95C6FCE5-F0E6-4690-8D56-FBBF1791C9E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Freight"
+              DTS:DTSID="{2BA0A352-1AFA-4CD8-A55B-77C58F419BB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalDue"
+              DTS:DTSID="{C32DA04B-F4B9-4FE9-9324-1DAC88B3E6C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Comment"
+              DTS:DTSID="{97AD31C6-685A-4E8C-89F5-FF14F3AE2DA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{54497E2E-0ECA-422A-A637-C5F89856F850}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{3B6AE5EA-EFE9-4B52-87F7-D8105DCC0EC3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{EE1027E0-8FEA-42BE-9BA4-643EF083893A}"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E2266E96-7824-4A11-872A-433846992830}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3BCFBFF1-E41F-4F0B-88E0-5AFE59A95406}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractSQL">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT [SalesOrderID]       ,[RevisionNumber]       ,[OrderDate]       ,[DueDate]       ,[ShipDate]       ,[Status]       ,[OnlineOrderFlag]       ,[SalesOrderNumber]       ,[PurchaseOrderNumber]       ,[AccountNumber]       ,[CustomerID]       ,[SalesPersonID]       ,[TerritoryID]       ,[BillToAddressID]       ,[ShipToAddressID]       ,[ShipMethodID]       ,[CreditCardID]       ,[CreditCardApprovalCode]       ,[CurrencyRateID]       ,[SubTotal]       ,[TaxAmt]       ,[Freight]       ,[TotalDue]       ,[Comment]       ,[rowguid]       ,[ModifiedDate]   FROM [Sales].[SalesOrderHeader] </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B640D514-FB92-4D2A-8DB1-9F1194C82FB5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FactTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">dw.FactResellerSales</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{404BC474-AE78-4810-967B-3594E728976F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxDateTime">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9BCEA83F-2F10-40A2-A389-F8552E12CEF1}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::ParentAuditKey]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E40E57DD-F408-4144-8B08-1BA9DE1C471B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FD252D05-CFC8-43FC-8C5B-9E409582CD3D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountError">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{12D5B804-6596-4F15-944A-62EF5DF184F0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountExtract">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F4723DE3-48C7-4268-AAC7-5611699F25BA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName">
+      <DTS:VariableValue
+        DTS:DataType="8">stageSalesHeader</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT Extract to Staging"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{20F98D95-F112-4A8F-A287-66C3F8DF3480}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Extract to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Extract to Staging\FF Errors"
+              componentClassID="{8DA75FED-1B7C-407D-B2AD-2B24209CCCA4}"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="FF Errors">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\FF Errors.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[stageError]"
+                  connectionManagerRefId="Package.ConnectionManagers[stageError]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[rowguid]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TerritoryID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[RevisionNumber]"
+                      cachedDataType="ui1"
+                      cachedName="RevisionNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[RevisionNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[RevisionNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[DueDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[DueDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[OnlineOrderFlag]"
+                      cachedDataType="bool"
+                      cachedName="OnlineOrderFlag"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[OnlineOrderFlag]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[SalesOrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="SalesOrderNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesOrderNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[PurchaseOrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="PurchaseOrderNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[PurchaseOrderNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[AccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="AccountNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[AccountNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[AccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesPersonID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[BillToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="BillToAddressID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BillToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[BillToAddressID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipToAddressID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ShipMethodID]"
+                      cachedDataType="i4"
+                      cachedName="ShipMethodID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipMethodID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipMethodID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[CreditCardID]"
+                      cachedDataType="i4"
+                      cachedName="CreditCardID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CreditCardID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[CreditCardApprovalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CreditCardApprovalCode"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CreditCardApprovalCode]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[CurrencyRateID]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyRateID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CurrencyRateID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CurrencyRateID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SubTotal]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SubTotal]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TaxAmt]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Freight]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TotalDue]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TotalDue]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[Comment]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="Comment"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Comment]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Comment]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[RevisionNumber]"
+                      dataType="ui1"
+                      name="RevisionNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[OnlineOrderFlag]"
+                      dataType="bool"
+                      name="OnlineOrderFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="SalesOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="PurchaseOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="AccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BillToAddressID]"
+                      dataType="i4"
+                      name="BillToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ShipMethodID]"
+                      dataType="i4"
+                      name="ShipMethodID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CreditCardID]"
+                      dataType="i4"
+                      name="CreditCardID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CreditCardApprovalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[CurrencyRateID]"
+                      dataType="i4"
+                      name="CurrencyRateID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      name="Comment" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\OLEDB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLEDB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Sales].[SalesOrderHeader]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [SalesOrderID]
+      ,[RevisionNumber]
+      ,[OrderDate]
+      ,[DueDate]
+      ,[ShipDate]
+      ,[Status]
+      ,[OnlineOrderFlag]
+      ,[SalesOrderNumber]
+      ,[PurchaseOrderNumber]
+      ,[AccountNumber]
+      ,[CustomerID]
+      ,[SalesPersonID]
+      ,[TerritoryID]
+      ,[BillToAddressID]
+      ,[ShipToAddressID]
+      ,[ShipMethodID]
+      ,[CreditCardID]
+      ,[CreditCardApprovalCode]
+      ,[CurrencyRateID]
+      ,[SubTotal]
+      ,[TaxAmt]
+      ,[Freight]
+      ,[TotalDue]
+      ,[Comment]
+      ,[rowguid]
+      ,[ModifiedDate]
+  FROM [Sales].[SalesOrderHeader]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::ExtractSQL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\OLEDB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{E57F2C32-C480-4B6C-981C-DC886DFAF812}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2012]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      name="rowguid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[RevisionNumber]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[RevisionNumber]"
+                      name="RevisionNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      name="DueDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      name="ShipDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Status]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[OnlineOrderFlag]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]"
+                      name="OnlineOrderFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderNumber]"
+                      length="25"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]"
+                      name="SalesOrderNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderNumber]"
+                      length="25"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]"
+                      name="PurchaseOrderNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                      length="15"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[AccountNumber]"
+                      name="AccountNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      name="SalesPersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[BillToAddressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[BillToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[BillToAddressID]"
+                      name="BillToAddressID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipMethodID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipMethodID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipMethodID]"
+                      name="ShipMethodID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardID]"
+                      name="CreditCardID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardApprovalCode]"
+                      length="15"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]"
+                      name="CreditCardApprovalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CurrencyRateID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyRateID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CurrencyRateID]"
+                      name="CurrencyRateID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      name="SubTotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      name="TaxAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Freight]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Freight]"
+                      name="Freight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      name="TotalDue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Comment]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Comment]"
+                      length="128"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Comment]"
+                      name="Comment"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[RevisionNumber]"
+                      dataType="ui1"
+                      name="RevisionNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[OnlineOrderFlag]"
+                      dataType="bool"
+                      name="OnlineOrderFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="SalesOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="PurchaseOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="AccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[BillToAddressID]"
+                      dataType="i4"
+                      name="BillToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipMethodID]"
+                      dataType="i4"
+                      name="ShipMethodID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardID]"
+                      dataType="i4"
+                      name="CreditCardID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CreditCardApprovalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyRateID]"
+                      dataType="i4"
+                      name="CurrencyRateID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].ExternalColumns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      name="Comment" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[RevisionNumber]"
+                      dataType="ui1"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[RevisionNumber]"
+                      name="RevisionNumber" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      name="DueDate" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      dataType="ui1"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[OnlineOrderFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[OnlineOrderFlag]"
+                      name="OnlineOrderFlag" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesOrderNumber]"
+                      name="SalesOrderNumber" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderNumber]"
+                      name="PurchaseOrderNumber" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[AccountNumber]"
+                      name="AccountNumber" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      name="SalesPersonID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[BillToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[BillToAddressID]"
+                      name="BillToAddressID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipMethodID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ShipMethodID]"
+                      name="ShipMethodID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CreditCardID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CreditCardID]"
+                      name="CreditCardID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CreditCardApprovalCode]"
+                      name="CreditCardApprovalCode" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyRateID]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyRateID]"
+                      name="CurrencyRateID" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      dataType="cy"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      name="TaxAmt" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      name="Freight" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      dataType="cy"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      name="TotalDue" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[Comment]"
+                      name="Comment" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      dataType="guid"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      name="rowguid" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\OLEDB Stage"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLEDB Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stageSalesHeader]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">1000</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Connections[OleDbConnection]"
+                  connectionManagerID="{F5733D6D-1A06-4AA8-8EC0-1B44E2D522C6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDW_stage_demo]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[rowguid]"
+                      cachedDataType="guid"
+                      cachedName="rowguid"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[rowguid]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[rowguid]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[RevisionNumber]"
+                      cachedDataType="ui1"
+                      cachedName="RevisionNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[RevisionNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[RevisionNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[DueDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[DueDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipDate]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[OnlineOrderFlag]"
+                      cachedDataType="bool"
+                      cachedName="OnlineOrderFlag"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[OnlineOrderFlag]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[OnlineOrderFlag]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[SalesOrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="SalesOrderNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesOrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[PurchaseOrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="PurchaseOrderNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[PurchaseOrderNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[PurchaseOrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[AccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="AccountNumber"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[AccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SalesPersonID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[BillToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="BillToAddressID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BillToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[BillToAddressID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipToAddressID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[ShipMethodID]"
+                      cachedDataType="i4"
+                      cachedName="ShipMethodID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipMethodID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[ShipMethodID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[CreditCardID]"
+                      cachedDataType="i4"
+                      cachedName="CreditCardID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CreditCardID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[CreditCardApprovalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CreditCardApprovalCode"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CreditCardApprovalCode]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CreditCardApprovalCode]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[CurrencyRateID]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyRateID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyRateID]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[CurrencyRateID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[SubTotal]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Freight]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TotalDue]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[TotalDue]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Comment]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="Comment"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Comment]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output].Columns[Comment]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[rowguid]"
+                      dataType="guid"
+                      name="rowguid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[RevisionNumber]"
+                      dataType="ui1"
+                      name="RevisionNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[OnlineOrderFlag]"
+                      dataType="bool"
+                      name="OnlineOrderFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="SalesOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[PurchaseOrderNumber]"
+                      dataType="wstr"
+                      length="25"
+                      name="PurchaseOrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AccountNumber]"
+                      dataType="wstr"
+                      length="15"
+                      name="AccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BillToAddressID]"
+                      dataType="i4"
+                      name="BillToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[ShipMethodID]"
+                      dataType="i4"
+                      name="ShipMethodID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CreditCardID]"
+                      dataType="i4"
+                      name="CreditCardID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CreditCardApprovalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CreditCardApprovalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyRateID]"
+                      dataType="i4"
+                      name="CurrencyRateID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Comment]"
+                      dataType="wstr"
+                      length="128"
+                      name="Comment" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\RC Error"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="RC Error">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCountError</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\RC Error.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\RC Extract"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="RC Extract">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCountExtract</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\RC Extract.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT Extract to Staging.Paths[OLE DB Destination Error Output]"
+              endId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]"
+              name="OLE DB Destination Error Output"
+              startId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[OLE DB Source Output]"
+              endId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DFT Extract to Staging\OLEDB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[Row Count Output 11]"
+              endId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT Extract to Staging\RC Extract.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[Row Count Output 1]"
+              endId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT Extract to Staging\RC Error.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXP Create Extract SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExpressionTask.ExpressionTask, Microsoft.SqlServer.ExpressionTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Expression Task"
+      DTS:DTSID="{E824CB28-5902-4740-B565-BE5B739CAC8D}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExpressionTask.ExpressionTask, Microsoft.SqlServer.ExpressionTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXP Create Extract SQL"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2012; � 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::ExtractSQL] =@[$Project::initialLoad] ?  @[User::ExtractSQL] :  @[User::ExtractSQL] + &quot; where OrderDate &gt; '&quot; +  (DT_WSTR, 50) (DT_DBTIMESTAMP) @[User::MaxDateTime] + &quot;' &quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Audit Begin"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{23DDC597-70E4-4117-82FB-D5664A0467D6}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Audit Begin"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; Ã‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{54B12122-37D8-4E6D-AA09-F1AB75FFD059}"
+          SQLTask:SqlStatementSource="INSERT INTO [dw].[DimAudit]&#xA;           (ParentAuditKey&#xA;           ,[TableName]&#xA;           ,[PkgName]&#xA;           ,[PkgGUID]&#xA;           ,[PkgVersionGUID]&#xA;           ,[PkgVersionMajor]&#xA;           ,[PkgVersionMinor]&#xA;           ,[ExecStartDT]&#xA;           ,[ExecStopDT]&#xA;           ,[ExecutionInstanceGUID]&#xA;           ,[ExtractRowCnt]&#xA;           ,[InsertRowCnt]&#xA;           ,[UpdateRowCnt]&#xA;           ,[ErrorRowCnt]&#xA;           ,[TableInitialRowCnt]&#xA;           ,[TableFinalRowCnt]&#xA;           ,[TableMaxDateTime]&#xA;           ,[SuccessfulProcessingInd])&#xA;     VALUES&#xA;           (?&#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,?&#xA;           ,NULL&#xA;           , ?&#xA;           ,NULL&#xA;           ,0&#xA;           ,0&#xA;           ,NULL&#xA;           ,? &#xA;           ,NULL&#xA;           ,NULL&#xA;           ,'N')&#xA;SELECT AuditKey from [dw].[DimAudit] where TableName = ? and ExecStartDT = ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AuditKey" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="2"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="2"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="9"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="10"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="11"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::ParentAuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Audit End"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F677A7FD-99B0-41C0-BB69-8515FB264703}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Audit End"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; Ã‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{54B12122-37D8-4E6D-AA09-F1AB75FFD059}"
+          SQLTask:SqlStatementSource="UPDATE [dw].[DimAudit]&#xA;SET ExecStopDT = SYSDATETIME()&#xA;&#x9;, ExtractRowCnt = ?&#xA;&#x9;,TableFinalRowCnt = ?&#xA;&#x9;,ErrorRowCnt = ?&#xA;&#x9;,SuccessfulProcessingInd='Y'&#xA;WHERE AuditKey = ?&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::RowCountExtract"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::RowCountError"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::AuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Count Rows"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D8550E14-5631-4E7A-A348-E88C623AB72A}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Count Rows"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; Ã‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"select count(*) from " +  @[User::TableName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F5733D6D-1A06-4AA8-8EC0-1B44E2D522C6}"
+          SQLTask:SqlStatementSource="select count(*) from stageSalesHeader"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Get Last Date"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CC057D24-BF96-4505-A057-60825B96CB00}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Get Last Date"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{54B12122-37D8-4E6D-AA09-F1AB75FFD059}"
+          SQLTask:SqlStatementSource="select max(TableMaxDateTime) as TableMaxDateTime from [dw].[DimAudit] where TableName = ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::MaxDateTime" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::FactTableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Truncate Staging"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B1428CEC-033F-4464-A130-2CF004397157}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Truncate Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; Ã‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"truncate table " +  @[User::TableName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F5733D6D-1A06-4AA8-8EC0-1B44E2D522C6}"
+          SQLTask:SqlStatementSource="truncate table stageSalesHeader" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B6BEC06B-CE07-4E71-A779-8AC046E610EF}"
+      DTS:From="Package\SQL Audit Begin"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\EXP Create Extract SQL" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{33AA51DE-3313-4E68-AFDB-B046BA92FEFE}"
+      DTS:From="Package\SQL Truncate Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL Audit Begin" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{03ADC10B-9890-4432-9DBA-21072C6E9945}"
+      DTS:From="Package\DFT Extract to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SQL Count Rows" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D05EA37E-880D-45FB-B0B7-0DD51D3825C8}"
+      DTS:From="Package\SQL Count Rows"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQL Audit End" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{00526070-7E22-4C41-83E9-281087DA913D}"
+      DTS:From="Package\EXP Create Extract SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DFT Extract to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{8345FBD1-B5B7-43C9-BC88-64D7CF72DC28}"
+      DTS:From="Package\SQL Get Last Date"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\SQL Audit Begin" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DFT Extract to Staging"
+          TopLeft="239.5,311.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\EXP Create Extract SQL"
+          TopLeft="237.5,209.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\SQL Audit Begin"
+          TopLeft="254.5,107.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\SQL Audit End"
+          TopLeft="258.5,515.5" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SQL Count Rows"
+          TopLeft="253.5,413.5" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\SQL Get Last Date"
+          TopLeft="249.5,5.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\SQL Truncate Staging"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="97,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="211.166666666667,60"
+              Start="0,0"
+              End="211.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6368221941992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6368221941992"
+                    Point2="0,35.6368221941992"
+                    Point3="4,35.6368221941992" />
+                  <mssgle:LineSegment
+                    End="207.166666666667,35.6368221941992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="207.166666666667,35.6368221941992"
+                    Point2="211.166666666667,35.6368221941992"
+                    Point3="211.166666666667,39.6368221941992" />
+                  <mssgle:LineSegment
+                    End="211.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="333,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="333,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="333,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="333,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.8333333333333,60"
+              Start="0,0"
+              End="24.8333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6368221941992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6368221941992"
+                    Point2="0,35.6368221941992"
+                    Point3="4,35.6368221941992" />
+                  <mssgle:LineSegment
+                    End="20.8333333333333,35.6368221941992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.8333333333333,35.6368221941992"
+                    Point2="24.8333333333333,35.6368221941992"
+                    Point3="24.8333333333333,39.6368221941992" />
+                  <mssgle:LineSegment
+                    End="24.8333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT Extract to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DFT Extract to Staging\OLEDB Source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\DFT Extract to Staging\RC Extract"
+          TopLeft="15,107.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DFT Extract to Staging\RC Error"
+          TopLeft="19.5,311.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\DFT Extract to Staging\OLEDB Stage"
+          TopLeft="8.50000000000003,209.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\DFT Extract to Staging\FF Errors"
+          TopLeft="18,413.5" />
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[Row Count Output 11]"
+          TopLeft="80,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[Row Count Output 1]"
+          TopLeft="80,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[OLE DB Source Output]"
+          TopLeft="80,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[OLE DB Destination Error Output]"
+          TopLeft="80,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.20890625,21.533203125,144.4178125,9.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT Extract to Staging\OLEDB Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT Extract to Staging\OLEDB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,1747 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2013 6:18:15 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DENALI01"
+  DTS:CreatorName="ADVENTUREWORKS\administrator"
+  DTS:DTSID="{4F8279F9-F4F8-4B99-8748-05951CF94DA3}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="06-10-reseller-extract"
+  DTS:PackageType="5"
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{EEEC747C-53A5-40BC-B5C9-004608900B4C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF reseller]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8071B7FF-45BA-44B1-9251-B6EE6352DCBB}"
+      DTS:ObjectName="FF reseller">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis-adv-data\reseller-business-rules.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessEntityID"
+              DTS:DTSID="{87FBDBD7-F169-43B2-AD01-A5B5FFF596C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{93D2B92F-BA88-43B0-8509-754453B348B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualSales"
+              DTS:DTSID="{53595E13-7535-4B6E-B6C6-B775BC442F49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualRevenue"
+              DTS:DTSID="{8697F51B-CED0-4727-A1CB-944D60645379}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BankName"
+              DTS:DTSID="{4D8E9CCF-5445-42DB-A538-23E72A15F91B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessType"
+              DTS:DTSID="{6D4604A8-DE0B-4449-AB54-B3A987911F81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YearOpened"
+              DTS:DTSID="{13520F51-EDFD-420B-9BF1-093A83772EEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Specialty"
+              DTS:DTSID="{9A3CDC78-6CD7-48D0-94E2-B5E3C5779779}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SquareFeet"
+              DTS:DTSID="{A35332D7-5A6E-4638-95AE-CA93C7B41124}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brands"
+              DTS:DTSID="{8759B085-8F27-4B08-A8CC-E917274A9ACE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Internet"
+              DTS:DTSID="{DCF58437-0CC5-4BB3-B1B7-0A9D6A817507}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberEmployees"
+              DTS:DTSID="{5079F4C4-C08F-441E-B34E-F7D0FC647E98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstOrderYear"
+              DTS:DTSID="{1819E5D6-B319-4EDC-A2D5-284985597D27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastOrderYear"
+              DTS:DTSID="{4ACE63B0-11EB-4403-82C2-46EBEB8123E8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[stageError]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D2E92273-88CD-4BBE-BA30-7FEDCC9478B0}"
+      DTS:ObjectName="stageError">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"C:\\ssis-adv-data\\errors\\" +  @[User::TableName]  + "Error.txt"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis-adv-data\errors\stageResellerError.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessEntityID"
+              DTS:DTSID="{792216E9-87BD-42CF-B73B-B62CD394FAE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{CC6DCF79-DDB9-4728-94B2-886FB8B39ED2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualSales"
+              DTS:DTSID="{98556CDD-FC38-40A2-83C4-7A43B8CD67D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualRevenue"
+              DTS:DTSID="{064384B3-3B56-4B1D-BB6B-7FE2F14B9641}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BankName"
+              DTS:DTSID="{D3FBDA05-5076-42A2-9D39-1DFA8F6D74ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessType"
+              DTS:DTSID="{4CCBE778-31CD-4F2C-9216-65BED03B9B9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YearOpened"
+              DTS:DTSID="{4BDB20A8-C036-4786-9658-90E084B2532A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Specialty"
+              DTS:DTSID="{576AABE9-E079-4504-8AD5-38DAF3E63E7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SquareFeet"
+              DTS:DTSID="{86ED0078-1A07-416B-9031-C67E3BB940D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brands"
+              DTS:DTSID="{B2A9A907-663A-49F8-897A-DA41066ABEBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Internet"
+              DTS:DTSID="{64753B86-4099-45CE-8BD1-5A425D5330FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberEmployees"
+              DTS:DTSID="{D73B9F5F-0F6C-4CD7-900A-44EEF13EA58F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstOrderYear"
+              DTS:DTSID="{37C7B4C6-C3ED-49AE-9FC5-CC559F03FCC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastOrderYear"
+              DTS:DTSID="{4C95BA65-C453-4342-B676-AAF18736BA96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{5F9832EB-3CAA-459A-9588-8613B9D6C825}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{FC9BD943-2E7D-458B-8574-A9D5529EBF54}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{7B7B7AB3-F1BB-4BD0-8B81-51A602C96370}"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{72568369-EECA-4764-9CD6-38C1E597FCF1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D1348D87-94B8-4736-B887-F9F6B50ACCC1}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{51229E33-42BC-460F-9221-4967D177F8D3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4BAADAE1-5699-4215-9366-84CBBCE6E5C0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountError">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9D7BD15C-3DF7-40B6-A626-DB163B7FFC0F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountExtract">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{718D47EA-6C07-474B-BCBC-B81CF381590D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName">
+      <DTS:VariableValue
+        DTS:DataType="8">stageReseller</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT Extract to Staging"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2B5141FA-228A-453C-A721-7B3D90947DDB}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT Extract to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT Extract to Staging\FF Errors"
+              componentClassID="{8DA75FED-1B7C-407D-B2AD-2B24209CCCA4}"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="FF Errors">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\FF Errors.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[stageError]"
+                  connectionManagerRefId="Package.ConnectionManagers[stageError]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessEntityID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Specialty]"
+                      dataType="wstr"
+                      length="50"
+                      name="Specialty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[SquareFeet]"
+                      dataType="i4"
+                      name="SquareFeet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Brands]"
+                      dataType="wstr"
+                      length="30"
+                      name="Brands" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[Internet]"
+                      dataType="wstr"
+                      length="30"
+                      name="Internet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\FF Source"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="FF Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\FF Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF reseller]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF reseller]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualSales]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[AnnualSales]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualSales]"
+                      name="AnnualSales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[AnnualRevenue]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]"
+                      name="AnnualRevenue"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BankName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BankName]"
+                      length="50"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BankName]"
+                      name="BankName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BusinessType]"
+                      length="5"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessType]"
+                      name="BusinessType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[YearOpened]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[YearOpened]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[YearOpened]"
+                      name="YearOpened"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Specialty]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Specialty]"
+                      length="50"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Specialty]"
+                      name="Specialty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[SquareFeet]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[SquareFeet]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[SquareFeet]"
+                      name="SquareFeet"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Brands]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Brands]"
+                      length="30"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Brands]"
+                      name="Brands"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Internet]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Internet]"
+                      length="30"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Internet]"
+                      name="Internet"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[NumberEmployees]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[NumberEmployees]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[NumberEmployees]"
+                      name="NumberEmployees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[FirstOrderYear]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]"
+                      name="FirstOrderYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[LastOrderYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[LastOrderYear]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[LastOrderYear]"
+                      name="LastOrderYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Specialty]"
+                      dataType="wstr"
+                      length="50"
+                      name="Specialty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[SquareFeet]"
+                      dataType="i4"
+                      name="SquareFeet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Brands]"
+                      dataType="wstr"
+                      length="30"
+                      name="Brands" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[Internet]"
+                      dataType="wstr"
+                      length="30"
+                      name="Internet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\OLEDB Stage"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLEDB Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stageReseller]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">1000</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Connections[OleDbConnection]"
+                  connectionManagerID="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDW_stage_demo]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessEntityID]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[AnnualSales]"
+                      cachedDataType="cy"
+                      cachedName="AnnualSales"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualSales]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[AnnualRevenue]"
+                      cachedDataType="cy"
+                      cachedName="AnnualRevenue"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[BankName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BankName"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BankName]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[BusinessType]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="BusinessType"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[BusinessType]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[YearOpened]"
+                      cachedDataType="i4"
+                      cachedName="YearOpened"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[YearOpened]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Specialty]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Specialty"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Specialty]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Specialty]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[SquareFeet]"
+                      cachedDataType="i4"
+                      cachedName="SquareFeet"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SquareFeet]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[SquareFeet]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Brands]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Brands"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Brands]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Brands]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[Internet]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Internet"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Internet]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[Internet]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[NumberEmployees]"
+                      cachedDataType="i4"
+                      cachedName="NumberEmployees"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[NumberEmployees]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[FirstOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="FirstOrderYear"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]" />
+                    <inputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].Columns[LastOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="LastOrderYear"
+                      externalMetadataColumnId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      lineageId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output].Columns[LastOrderYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Specialty]"
+                      dataType="wstr"
+                      length="50"
+                      name="Specialty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SquareFeet]"
+                      dataType="i4"
+                      name="SquareFeet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Brands]"
+                      dataType="wstr"
+                      length="30"
+                      name="Brands" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Internet]"
+                      dataType="wstr"
+                      length="30"
+                      name="Internet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      dataType="i4"
+                      name="StoreID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\RC Error"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="RC Error">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCountError</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\RC Error.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT Extract to Staging\RC Extract"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="RC Extract">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCountExtract</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT Extract to Staging\RC Extract.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT Extract to Staging.Paths[Flat File Source Output]"
+              endId="Package\DFT Extract to Staging\RC Extract.Inputs[Row Count Input 1]"
+              name="Flat File Source Output"
+              startId="Package\DFT Extract to Staging\FF Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[OLE DB Destination Error Output]"
+              endId="Package\DFT Extract to Staging\RC Error.Inputs[Row Count Input 1]"
+              name="OLE DB Destination Error Output"
+              startId="Package\DFT Extract to Staging\OLEDB Stage.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[Row Count Output 11]"
+              endId="Package\DFT Extract to Staging\FF Errors.Inputs[Flat File Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT Extract to Staging\RC Error.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT Extract to Staging.Paths[Row Count Output 1]"
+              endId="Package\DFT Extract to Staging\OLEDB Stage.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT Extract to Staging\RC Extract.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Audit Begin"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{60AE3A51-E90B-49D3-8033-A3A79D95A5D6}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Audit Begin"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D4DFAA9-1990-4E53-B151-AD2F34E4425F}"
+          SQLTask:SqlStatementSource="INSERT INTO [dw].[DimAudit]&#xA;           (ParentAuditKey&#xA;           ,[TableName]&#xA;           ,[PkgName]&#xA;           ,[PkgGUID]&#xA;           ,[PkgVersionGUID]&#xA;           ,[PkgVersionMajor]&#xA;           ,[PkgVersionMinor]&#xA;           ,[ExecStartDT]&#xA;           ,[ExecStopDT]&#xA;           ,[ExecutionInstanceGUID]&#xA;           ,[ExtractRowCnt]&#xA;           ,[InsertRowCnt]&#xA;           ,[UpdateRowCnt]&#xA;           ,[ErrorRowCnt]&#xA;           ,[TableInitialRowCnt]&#xA;           ,[TableFinalRowCnt]&#xA;           ,[TableMaxDateTime]&#xA;           ,[SuccessfulProcessingInd])&#xA;     VALUES&#xA;           (?&#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,? &#xA;           ,?&#xA;           ,NULL&#xA;           , ?&#xA;           ,NULL&#xA;           ,0&#xA;           ,0&#xA;           ,NULL&#xA;           ,? &#xA;           ,NULL&#xA;           ,NULL&#xA;           ,'N')&#xA;SELECT AuditKey from [dw].[DimAudit] where TableName = ? and ExecStartDT = ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AuditKey" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="2"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="2"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="9"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="10"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="11"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::ParentAuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="72"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Audit End"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C3B5CA50-8AB9-46F6-A9B5-3F49C646B9CC}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Audit End"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D4DFAA9-1990-4E53-B151-AD2F34E4425F}"
+          SQLTask:SqlStatementSource="UPDATE [dw].[DimAudit]&#xA;SET ExecStopDT = SYSDATETIME()&#xA;&#x9;, ExtractRowCnt = ?&#xA;&#x9;,TableFinalRowCnt = ?&#xA;&#x9;,ErrorRowCnt = ?&#xA;&#x9;,SuccessfulProcessingInd='Y'&#xA;WHERE AuditKey = ?&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::RowCountExtract"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::RowCountError"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::AuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Count Rows"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9489B2DC-2929-4EE2-B692-0346EBA36ADD}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Count Rows"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"select count(*) from " +  @[User::TableName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}"
+          SQLTask:SqlStatementSource="select count(*) from stageReseller"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Truncate Staging"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3278A0D0-94DF-4FB7-B52A-56CC6E252A4B}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Truncate Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"truncate table " +  @[User::TableName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}"
+          SQLTask:SqlStatementSource="truncate table stageReseller" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EB086F2D-0FAD-4858-A97D-176ED0D231FE}"
+      DTS:From="Package\SQL Audit Begin"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT Extract to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7E35E82C-0653-4054-B0B3-608EC38FC55F}"
+      DTS:From="Package\SQL Truncate Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL Audit Begin" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{8BCEB83B-538D-4B90-B451-B3D906073258}"
+      DTS:From="Package\DFT Extract to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\SQL Count Rows" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{9A7BF552-FC25-4187-AA91-A1ED02395628}"
+      DTS:From="Package\SQL Count Rows"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQL Audit End" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DFT Extract to Staging"
+          TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\SQL Audit Begin"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\SQL Audit End"
+          TopLeft="24.5,413.5" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SQL Count Rows"
+          TopLeft="19.5,311.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\SQL Truncate Staging"
+          TopLeft="7.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="99,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="99,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="99,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="99,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT Extract to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="128,42"
+          Id="Package\DFT Extract to Staging\FF Source"
+          TopLeft="13,5.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\DFT Extract to Staging\OLEDB Stage"
+          TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\DFT Extract to Staging\RC Extract"
+          TopLeft="12,107.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\DFT Extract to Staging\FF Errors"
+          TopLeft="15,413.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DFT Extract to Staging\RC Error"
+          TopLeft="16.5,311.5" />
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[OLE DB Destination Error Output]"
+          TopLeft="77,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.20890625,21.533203125,144.4178125,9.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[Flat File Source Output]"
+          TopLeft="77,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[Row Count Output 11]"
+          TopLeft="77,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Extract to Staging.Paths[Row Count Output 1]"
+          TopLeft="77,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT Extract to Staging\OLEDB Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

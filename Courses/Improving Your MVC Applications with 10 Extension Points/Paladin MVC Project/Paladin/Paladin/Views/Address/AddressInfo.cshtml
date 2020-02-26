@@ -1,0 +1,69 @@
+﻿@model Paladin.ViewModels.Addresses
+@{
+    ViewBag.Title = "AddressInfo";
+}
+@section ProgressBar{
+    @Html.Action("ProgressBar", "Home", new { currentStage = (int)WorkflowValues.AddressInfo })
+}
+<div class="col-md-12">
+    <h2 class="page-header">Where do you live?<small style="margin-left: 25px">Tell us about your place!</small></h2>
+</div>
+<div class="employment-info">
+    @using (Html.BeginForm("AddressInfo", "Address", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="col-md-12">
+            @Html.ValidationSummary()
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Main Address</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MainAddress.StreetAddress)
+                        @Html.TextBoxFor(x => x.MainAddress.StreetAddress, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MainAddress.City)
+                        @Html.TextBoxFor(x => x.MainAddress.City, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MainAddress.State)
+                        @Html.TextBoxFor(x => x.MainAddress.State, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MainAddress.Zip)
+                        @Html.TextBoxFor(x => x.MainAddress.Zip, new { @class = "form-control required digits" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Mailing Address</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MailingAddress.StreetAddress)
+                        @Html.TextBoxFor(x => x.MailingAddress.StreetAddress, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MailingAddress.City)
+                        @Html.TextBoxFor(x => x.MailingAddress.City, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MailingAddress.State)
+                        @Html.TextBoxFor(x => x.MailingAddress.State, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.MailingAddress.Zip)
+                        @Html.TextBoxFor(x => x.MailingAddress.Zip, new { @class = "form-control required digits" })
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    <div class="col-md-12">
+        <input type="submit" class="btn btn-primary pull-right" value="Let's go!" />
+    </div>
+    }
+</div>

@@ -1,0 +1,111 @@
+﻿@model Paladin.ViewModels.ApplicantVM
+@{
+    ViewBag.Title = "Index";
+}
+@section ProgressBar{
+    @Html.Action("ProgressBar", "Home", new { currentStage = (int)WorkflowValues.ApplicantInfo })
+}
+<div class="col-md-12">
+    <h2 >Who are you?<small style="margin-left: 25px">Help us get to know you!</small></h2>
+</div>
+<div class="employment-info">
+    @using (Html.BeginForm("ApplicantInfo", "Applicant", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="col-md-12">
+            @Html.ValidationSummary()
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Basic Info</div>
+                <div class="panel-body">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(x => x.FirstName)
+                        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(x => x.LastName)
+                        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(x => x.Phone)
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control digits required" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(x => x.Email)
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group col-md-12">
+                        @Html.LabelFor(x => x.Dob)
+                        @Html.TextBoxFor(x => x.Dob, new { @Value = Model.Dob.HasValue ? Model.Dob.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker required" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Additional Info</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @{
+        var maritalStatus = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "Single", Value = "Single" },
+                                new SelectListItem(){ Text = "Married", Value = "Married" }
+                            };
+                        }
+
+                        @Html.LabelFor(x => x.MaritalStatus)
+                        @Html.DropDownListFor(x => x.MaritalStatus, maritalStatus, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            @{
+        var statusList = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "Valid", Value = "Valid" },
+                                new SelectListItem(){ Text = "Suspended", Value = "Suspended" },
+                                new SelectListItem(){ Text = "No License", Value = "No License" }
+                            };
+                            }
+
+                            @Html.LabelFor(x => x.LicenseStatus)
+                            @Html.DropDownListFor(x => x.LicenseStatus, statusList, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            @{
+        var yearLicensed = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "Less than 1", Value = "1" },
+                                new SelectListItem(){ Text = "1 -5 years", Value = "2" },
+                                new SelectListItem(){ Text = "5+ years", Value = "3" }
+                            };
+                            }
+
+                            @Html.LabelFor(x => x.LicenseStatus)
+                            @Html.DropDownListFor(x => x.YearsLicensed, yearLicensed, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @{
+        var educationOptions = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "High School Graduate", Value = "1" },
+                                new SelectListItem(){ Text = "Associate's Degree", Value = "2" },
+                                new SelectListItem(){ Text = "Bachelor's Degree", Value = "3" },
+                                new SelectListItem(){ Text = "Master's Degree or Higher", Value = "4" }
+                            };
+                        }
+
+                        @Html.LabelFor(x => x.HighestEducation)
+                        @Html.DropDownListFor(x => x.HighestEducation, educationOptions, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-12">
+            <input type="submit" class="btn btn-primary pull-right" value="Let's go!" />
+        </div>
+
+    }
+
+</div>

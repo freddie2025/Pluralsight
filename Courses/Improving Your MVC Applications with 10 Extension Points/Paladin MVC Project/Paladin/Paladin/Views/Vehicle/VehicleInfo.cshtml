@@ -1,0 +1,70 @@
+﻿@model Paladin.ViewModels.VehicleVM
+@{
+    ViewBag.Title = "Index";
+}
+@section ProgressBar{
+    @Html.Action("ProgressBar", "Home", new { currentStage = (int)WorkflowValues.VehicleInfo })
+}
+<div class="col-md-12">
+    <h2 class="page-header">What kind of vehicle do you drive?<small style="margin-left: 25px">Tell us about your ride.</small></h2>
+</div>
+<div class="applicant-info">
+    @using (Html.BeginForm("VehicleInfo", "Vehicle", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="col-md-12">
+            @Html.ValidationSummary()
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Vehicle Info</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @{
+        var vehicleYears = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "2015", Value = "2015" },
+                                new SelectListItem(){ Text = "2014", Value = "2014" },
+                                new SelectListItem(){ Text = "2013", Value = "2013" },
+                                new SelectListItem(){ Text = "2012", Value = "2012" },
+                                new SelectListItem(){ Text = "2011", Value = "2011" },
+                                new SelectListItem(){ Text = "2010", Value = "2010" },
+                                new SelectListItem(){ Text = "2009", Value = "2009" },
+                                new SelectListItem(){ Text = "2008", Value = "2008" },
+                                new SelectListItem(){ Text = "2007", Value = "2007" }
+                            };
+                        }
+
+                        @Html.LabelFor(x => x.Year)
+                        @Html.DropDownListFor(x => x.Year, vehicleYears, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Make)
+                        @Html.TextBoxFor(x => x.Make, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Model)
+                        @Html.TextBoxFor(x => x.Model, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PrimaryUse)
+                        @Html.TextBoxFor(x => x.PrimaryUse, new { @class = "form-control required" })
+                    </div>
+                    @{
+                            var ownLease = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "Own", Value = "Own" },
+                                new SelectListItem(){ Text = "Lease", Value = "Lease" }
+                            };
+                    }
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.OwnLease)
+                        @Html.DropDownListFor(x => x.OwnLease, ownLease, new { @class = "form-control required" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-12">
+        <input type="submit" class="btn btn-primary pull-right" value="Let's go!'" />
+    </div>
+    }
+</div>

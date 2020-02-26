@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ssis-adv-m4-01", "ssis-adv-m4-01\ssis-adv-m4-01.dtproj", "{48F7A6C7-8E94-4A35-8BA5-6BED68483F87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48F7A6C7-8E94-4A35-8BA5-6BED68483F87}.Development|Default.ActiveCfg = Development
+		{48F7A6C7-8E94-4A35-8BA5-6BED68483F87}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

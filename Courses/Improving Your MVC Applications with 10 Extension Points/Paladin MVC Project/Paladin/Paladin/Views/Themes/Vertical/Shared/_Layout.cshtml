@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Paladin Insurance</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="paladin">
+                <h1 class="pull-left"><a href="~/">Paladin</a><small>We Fight For You. Always.</small></h1>
+            </div>
+            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Quote</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+       
+        
+        <div class="row">
+            <div class="col-md-3">
+                @if (IsSectionDefined("ProgressBar"))
+                {
+                    @RenderSection("ProgressBar")
+                }
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- Footer -->
+        
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>We're committed to serving you. Contact us at 555-555-5555 day or night.</p>
+                    <p>Copyright &copy; Paladin Insurance 2015</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Find Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Privacy Agreement</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Google+</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script>
+    $(function () {
+        $(".datepicker").datepicker();
+
+        $(".datepicker-alt").datepicker();
+
+        $('form').validate();
+    });
+    </script></body>
+</html>

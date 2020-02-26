@@ -1,0 +1,86 @@
+﻿@model Paladin.ViewModels.ProductsVM
+@{
+    ViewBag.Title = "Index";
+}
+@section ProgressBar{
+    @Html.Action("ProgressBar", "Home", new { currentStage = (int)WorkflowValues.ProductInfo })
+}
+<div class="col-md-12">
+    <h2 class="page-header">Customize Your Policy<small style="margin-left: 25px">It's all up to you!</small></h2>
+</div>
+<div class="applicant-info">
+    @using (Html.BeginForm("ProductInfo", "Products", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="col-md-12">
+            @Html.ValidationSummary()
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Coverage Amounts</div>
+                <div class="panel-body">
+
+                    @{
+        var deductibles = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "100", Value = "100" },
+                                new SelectListItem(){ Text = "250", Value = "250" },
+                                new SelectListItem(){ Text = "500", Value = "500" },
+                                new SelectListItem(){ Text = "1000", Value = "1000" }
+                            };
+
+        var amounts = new List<SelectListItem>(){
+                                new SelectListItem(){ Text = "100000", Value = "100000" },
+                                new SelectListItem(){ Text = "250000", Value = "250000" },
+                                new SelectListItem(){ Text = "500000", Value = "500000" },
+                                new SelectListItem(){ Text = "1000000", Value = "1000000" }
+                            };
+                    }
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Collision, "Collision Deductible")
+                        @Html.DropDownListFor(x => x.Collision, deductibles, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Comprehensive, "Comprehensive Deductible")
+                        @Html.DropDownListFor(x => x.Comprehensive, deductibles, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.PropertyDamage)
+                        @Html.DropDownListFor(x => x.PropertyDamage, amounts, new { @class = "form-control required" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Liability)
+                        @Html.DropDownListFor(x => x.Liability, amounts, new { @class = "form-control required" })
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Insurance Options</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.CheckBoxFor(x => x.Rental) 
+                        @Html.LabelFor(x => x.Rental)
+                    </div>
+                    
+                    <div class="form-group">
+                        @Html.CheckBoxFor(x => x.RoadSideAssistance) 
+                        @Html.LabelFor(x => x.RoadSideAssistance)
+                    </div>
+                    <div class="form-group">
+                        @Html.CheckBoxFor(x => x.LoanPayoff) 
+                        @Html.LabelFor(x => x.LoanPayoff)
+                    </div>
+                    <div class="form-group">
+                        @Html.CheckBoxFor(x => x.DriverRewards)
+                        @Html.LabelFor(x => x.DriverRewards)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="submit" class="btn btn-primary pull-right" value="Let's go!'" />
+        </div>
+
+    }
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Cache Unit Measure"
+  DTS:DTSID="{63C61594-57C1-4925-998D-C6CB11191A6A}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:UseFile="True"
+      DTS:ConnectionString="C:\ssis-adv-data\unit-measure.caw">
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="129"
+          DTS:Length="50"
+          DTS:CodePage="1252"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="unitmeasurecode"
+          DTS:DTSID="{F9B39438-7E8C-42E5-9F4E-45C7C6A5D6D1}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="129"
+          DTS:Length="50"
+          DTS:CodePage="1252"
+          DTS:ObjectName="unitmeasure"
+          DTS:DTSID="{3F0B03AC-D4A5-4A43-B38A-1BEE2B876CB4}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

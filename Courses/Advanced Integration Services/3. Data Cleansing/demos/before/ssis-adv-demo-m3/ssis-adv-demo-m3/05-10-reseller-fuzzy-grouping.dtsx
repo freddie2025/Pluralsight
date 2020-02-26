@@ -1,0 +1,3012 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2013 6:18:15 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DENALI01"
+  DTS:CreatorName="ADVENTUREWORKS\administrator"
+  DTS:DTSID="{372BF9F3-C5B9-4C1D-A340-4E7997EED3EE}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="05-10-reseller-fuzzy-grouping"
+  DTS:PackageType="5"
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{C61F6B3A-7D0B-4695-BAB1-033A461AA5CC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF fuzzy grouping]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{810D5D0E-DB46-418F-AB58-EF4DA07011DE}"
+      DTS:ObjectName="FF fuzzy grouping">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis-adv-data\reseller-fuzzy-dupes.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BusinessType"
+              DTS:DTSID="{A7C0E4E1-705F-48FD-90DC-92F8FDFA531C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ResellerName"
+              DTS:DTSID="{5F4EBEB0-7601-4BAE-AB68-C5A3D44278DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberEmployees"
+              DTS:DTSID="{441D98CB-FC20-422F-84A6-2D1274EB3B7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstOrderYear"
+              DTS:DTSID="{9AC54262-4305-4C4D-B1EE-A8B530E595D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastOrderYear"
+              DTS:DTSID="{E116F611-3607-4612-9E92-D02AAE2C84DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductLine"
+              DTS:DTSID="{F5D6F644-9343-4463-B7FA-CDD8B04079C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AddressLine1"
+              DTS:DTSID="{C72E3A24-F699-4C14-BEE1-25CA626D7984}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AddressLine2"
+              DTS:DTSID="{353C29A9-C24A-43D8-97F2-2E53058748B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{B2425279-2EC9-41FF-952A-086CCC47157B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StateProvinceCode"
+              DTS:DTSID="{8631AFA2-B0E8-4DD8-B575-921AB5824C31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostalCode"
+              DTS:DTSID="{B06F5591-24EC-4BB8-93E6-9B19ADF96845}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualSales"
+              DTS:DTSID="{32D96497-96DF-4654-AD81-A3F27FD81119}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BankName"
+              DTS:DTSID="{84882EC2-A445-4338-95D0-7E5509FA9A0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualRevenue"
+              DTS:DTSID="{3C5864D1-F11C-4409-8DA0-133F27F14A64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YearOpened"
+              DTS:DTSID="{BC4BD6A6-28A9-4D2C-A1E4-CE5AF5F9CDF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Current"
+              DTS:DTSID="{58638A96-A1C8-45B3-BD2A-F204D98F55B7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{7B638EEC-EB12-4722-9BEA-FF4F9A86B8EA}"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8C9C5BB5-DCDE-4E2A-9156-323B0EC4D0AB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C8E26C2F-FAE3-4F56-A074-BD92EF904693}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">-1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28D9D115-9E4C-4A26-9717-29996237CE93}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{254151F2-276B-40CC-BE7C-E4E719F042E9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountError">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7FCFBDC1-D10B-4B83-BB4E-8C5B8601F82D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCountExtract">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2C046E2E-56E3-4815-A547-99AA5EB5AEE2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName1">
+      <DTS:VariableValue
+        DTS:DataType="8">stageReseller_FuzzyGrouping</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9F7CCB72-5E42-4CFD-B580-24D7BD2DDBC6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName2">
+      <DTS:VariableValue
+        DTS:DataType="8">stageReseller</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT De-Dupe"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1806A242-A751-43C8-8A3D-63D0F89AED31}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT De-Dupe"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT De-Dupe\CS Find Main Record"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CS Find Main Record"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input].Columns[_score]"
+                      cachedDataType="r4"
+                      cachedName="_score"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Prime]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Prime"
+                  synchronousInputId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]} == 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">_score == 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Dupe]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Dupe"
+                  synchronousInputId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT De-Dupe\Flat File Source"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT De-Dupe\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF fuzzy grouping]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF fuzzy grouping]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BusinessType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BusinessType]"
+                      length="5"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BusinessType]"
+                      name="BusinessType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ResellerName]"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]"
+                      name="ResellerName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[NumberEmployees]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberEmployees]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[NumberEmployees]"
+                      name="NumberEmployees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FirstOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]"
+                      name="FirstOrderYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[LastOrderYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LastOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[LastOrderYear]"
+                      name="LastOrderYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ProductLine]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductLine]"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ProductLine]"
+                      name="ProductLine"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                      length="60"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]"
+                      name="AddressLine1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                      length="60"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]"
+                      name="AddressLine2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      length="30"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceCode]"
+                      length="3"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]"
+                      name="StateProvinceCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                      length="15"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualSales]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AnnualSales]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualSales]"
+                      name="AnnualSales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BankName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BankName]"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BankName]"
+                      name="BankName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AnnualRevenue]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]"
+                      name="AnnualRevenue"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[YearOpened]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[YearOpened]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[YearOpened]"
+                      name="YearOpened"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[Current]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Current]"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[Current]"
+                      name="Current"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ResellerName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ResellerName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductLine" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="30"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateProvinceCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="StateProvinceCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="15"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Current]"
+                      dataType="bool"
+                      name="Current" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT De-Dupe\Fuzzy Grouping"
+              componentClassID="{836E0D0B-0358-45B4-B888-4ADCE9356D4E}"
+              contactInfo="Fuzzy Grouping;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Identifies potential duplicate rows and helps standardize the data by selecting canonical replacements. For example, reduce the occurrences of typos in a 'company name' column by referencing an approved list of company names."
+              name="Fuzzy Grouping"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Single"
+                  description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                  name="MinSimilarity">0.4</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the white-space and punctuation characters used to separate strings into multiple words."
+                  name="Delimiters"> 	
+,.;:-"'&amp;/\@!?()&lt;&gt;[]{}|#*^%</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the maximum amount of memory (MB) that transform should use.  A value of 0 will enable dynamic memory usage based upon requirements and available system memory."
+                  expressionType="Notify"
+                  name="MaxMemoryUsage" />
+                <property
+                  dataType="System.Boolean"
+                  description="If true, each input record will be directly compared against EVERY other input record.  This may produce slightly better results, but will be extremely slow unless the number of input records is very small.  This option is primarily intended for debugging purposes and should be used with care."
+                  name="Exhaustive">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT De-Dupe\Fuzzy Grouping.Connections[OleDbConnection]"
+                  connectionManagerID="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDW_stage_demo]"
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input]"
+                  name="Fuzzy Grouping Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[AnnualSales]"
+                      cachedDataType="cy"
+                      cachedName="AnnualSales"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualSales]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[AnnualRevenue]"
+                      cachedDataType="cy"
+                      cachedName="AnnualRevenue"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[BankName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BankName"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BankName]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[BusinessType]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="BusinessType"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BusinessType]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[YearOpened]"
+                      cachedDataType="i4"
+                      cachedName="YearOpened"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[YearOpened]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[NumberEmployees]"
+                      cachedDataType="i4"
+                      cachedName="NumberEmployees"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[NumberEmployees]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[FirstOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="FirstOrderYear"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[LastOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="LastOrderYear"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[LastOrderYear]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[ResellerName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ResellerName"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[ProductLine]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductLine"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ProductLine]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[AddressLine1]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine1"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[AddressLine2]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine2"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="City"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[StateProvinceCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="StateProvinceCode"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="PostalCode"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[Current]"
+                      cachedDataType="bool"
+                      cachedName="Current"
+                      lineageId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[Current]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output]"
+                  name="Fuzzy Grouping Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]"
+                      name="_key_in">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]"
+                      name="_key_out">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]"
+                      dataType="r4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]"
+                      name="_score">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualSales]"
+                      dataType="cy"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualSales]"
+                      name="AnnualSales">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualSales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualRevenue]"
+                      dataType="cy"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualRevenue]"
+                      name="AnnualRevenue">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AnnualRevenue]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BankName]"
+                      name="BankName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BankName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BusinessType]"
+                      name="BusinessType">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[BusinessType]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[YearOpened]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[YearOpened]"
+                      name="YearOpened">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[YearOpened]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[NumberEmployees]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[NumberEmployees]"
+                      name="NumberEmployees">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[NumberEmployees]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstOrderYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstOrderYear]"
+                      name="FirstOrderYear">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[FirstOrderYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastOrderYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastOrderYear]"
+                      name="LastOrderYear">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[LastOrderYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName]"
+                      name="ResellerName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ProductLine]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ProductLine]"
+                      name="ProductLine">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ProductLine]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1]"
+                      name="AddressLine1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine2]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine2]"
+                      name="AddressLine2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine2]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode]"
+                      name="StateProvinceCode">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode]"
+                      name="PostalCode">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[Current]"
+                      dataType="bool"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[Current]"
+                      name="Current">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[Current]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName_clean]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName_clean]"
+                      name="ResellerName_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1_clean]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1_clean]"
+                      name="AddressLine1_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City_clean]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City_clean]"
+                      name="City_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode_clean]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode_clean]"
+                      name="StateProvinceCode_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode_clean]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode_clean]"
+                      name="PostalCode_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_ResellerName]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;ResellerName&quot;."
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_ResellerName]"
+                      name="_Similarity_ResellerName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[ResellerName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_AddressLine1]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;AddressLine1&quot;."
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_AddressLine1]"
+                      name="_Similarity_AddressLine1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[AddressLine1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_City]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;City&quot;."
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_City]"
+                      name="_Similarity_City">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_StateProvinceCode]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;StateProvinceCode&quot;."
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_StateProvinceCode]"
+                      name="_Similarity_StateProvinceCode">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[StateProvinceCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_PostalCode]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;PostalCode&quot;."
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_PostalCode]"
+                      name="_Similarity_PostalCode">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT De-Dupe\Multicast"
+              componentClassID="{EC139FBC-694E-490B-8EA7-35690FB0F445}"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\DFT De-Dupe\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\DFT De-Dupe\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT De-Dupe\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\DFT De-Dupe\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT De-Dupe\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\DFT De-Dupe\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT De-Dupe\OLE DB Stage"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stageReseller]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT De-Dupe\OLE DB Stage.Connections[OleDbConnection]"
+                  connectionManagerID="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDW_stage_demo]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[AnnualSales]"
+                      cachedDataType="cy"
+                      cachedName="AnnualSales"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualSales]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[AnnualRevenue]"
+                      cachedDataType="cy"
+                      cachedName="AnnualRevenue"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualRevenue]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[BankName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BankName"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BankName]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[BusinessType]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="BusinessType"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BusinessType]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[YearOpened]"
+                      cachedDataType="i4"
+                      cachedName="YearOpened"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[YearOpened]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[NumberEmployees]"
+                      cachedDataType="i4"
+                      cachedName="NumberEmployees"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[NumberEmployees]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[FirstOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="FirstOrderYear"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstOrderYear]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[LastOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="LastOrderYear"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastOrderYear]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].Columns[ResellerName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ResellerName"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Specialty]"
+                      dataType="wstr"
+                      length="50"
+                      name="Specialty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[SquareFeet]"
+                      dataType="i4"
+                      name="SquareFeet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Brands]"
+                      dataType="wstr"
+                      length="30"
+                      name="Brands" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[Internet]"
+                      dataType="wstr"
+                      length="30"
+                      name="Internet" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      dataType="i4"
+                      name="StoreID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\OLE DB Stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\OLE DB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\OLE DB Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Stage Fuzzy Grouping"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stageReseller_FuzzyGrouping]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Connections[OleDbConnection]"
+                  connectionManagerID="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorksDW_stage_demo]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_key_in]"
+                      cachedDataType="i4"
+                      cachedName="_key_in"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_key_out]"
+                      cachedDataType="i4"
+                      cachedName="_key_out"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_score]"
+                      cachedDataType="r4"
+                      cachedName="_score"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[AnnualSales]"
+                      cachedDataType="cy"
+                      cachedName="AnnualSales"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualSales]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[AnnualRevenue]"
+                      cachedDataType="cy"
+                      cachedName="AnnualRevenue"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AnnualRevenue]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[BankName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BankName"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BankName]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[BusinessType]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="BusinessType"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[BusinessType]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[YearOpened]"
+                      cachedDataType="i4"
+                      cachedName="YearOpened"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[YearOpened]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[NumberEmployees]"
+                      cachedDataType="i4"
+                      cachedName="NumberEmployees"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[NumberEmployees]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[FirstOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="FirstOrderYear"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstOrderYear]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[LastOrderYear]"
+                      cachedDataType="i4"
+                      cachedName="LastOrderYear"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastOrderYear]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[ResellerName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ResellerName"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerName]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[ProductLine]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductLine"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ProductLine]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ProductLine]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[AddressLine1]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine1"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[AddressLine2]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine2"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine2]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[StateProvinceCode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="StateProvinceCode"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceCode]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[Current]"
+                      cachedDataType="bool"
+                      cachedName="Current"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[Current]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[Current]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[ResellerName_clean]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ResellerName_clean"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerName_clean]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[ResellerName_clean]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[AddressLine1_clean]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="AddressLine1_clean"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1_clean]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[AddressLine1_clean]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[City_clean]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="City_clean"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[City_clean]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[City_clean]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[StateProvinceCode_clean]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="StateProvinceCode_clean"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceCode_clean]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[StateProvinceCode_clean]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[PostalCode_clean]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="PostalCode_clean"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode_clean]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[PostalCode_clean]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_Similarity_ResellerName]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_ResellerName"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_ResellerName]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_ResellerName]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_Similarity_AddressLine1]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_AddressLine1"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_AddressLine1]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_AddressLine1]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_Similarity_City]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_City"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_City]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_City]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_Similarity_StateProvinceCode]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_StateProvinceCode"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_StateProvinceCode]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_StateProvinceCode]" />
+                    <inputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].Columns[_Similarity_PostalCode]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_PostalCode"
+                      externalMetadataColumnId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_PostalCode]"
+                      lineageId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_PostalCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      dataType="i4"
+                      name="_key_in" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      dataType="i4"
+                      name="_key_out" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      dataType="r4"
+                      name="_score" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AnnualSales]"
+                      dataType="cy"
+                      name="AnnualSales" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AnnualRevenue]"
+                      dataType="cy"
+                      name="AnnualRevenue" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[BankName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BankName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[BusinessType]"
+                      dataType="wstr"
+                      length="5"
+                      name="BusinessType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[YearOpened]"
+                      dataType="i4"
+                      name="YearOpened" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[NumberEmployees]"
+                      dataType="i4"
+                      name="NumberEmployees" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[FirstOrderYear]"
+                      dataType="i4"
+                      name="FirstOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[LastOrderYear]"
+                      dataType="i4"
+                      name="LastOrderYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerKey]"
+                      dataType="i4"
+                      name="ResellerKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerAlternateKey]"
+                      dataType="wstr"
+                      length="15"
+                      name="ResellerAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ResellerName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ProductLine]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductLine" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="30"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceCode]"
+                      dataType="wstr"
+                      length="3"
+                      name="StateProvinceCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="15"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[Current]"
+                      dataType="bool"
+                      name="Current" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[Inferred]"
+                      dataType="bool"
+                      name="Inferred" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[ResellerName_clean]"
+                      dataType="wstr"
+                      length="50"
+                      name="ResellerName_clean" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1_clean]"
+                      dataType="wstr"
+                      length="60"
+                      name="AddressLine1_clean" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[City_clean]"
+                      dataType="wstr"
+                      length="30"
+                      name="City_clean" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[StateProvinceCode_clean]"
+                      dataType="wstr"
+                      length="3"
+                      name="StateProvinceCode_clean" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode_clean]"
+                      dataType="wstr"
+                      length="15"
+                      name="PostalCode_clean" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_ResellerName]"
+                      dataType="r4"
+                      name="_Similarity_ResellerName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_AddressLine1]"
+                      dataType="r4"
+                      name="_Similarity_AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_City]"
+                      dataType="r4"
+                      name="_Similarity_City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_StateProvinceCode]"
+                      dataType="r4"
+                      name="_Similarity_StateProvinceCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_PostalCode]"
+                      dataType="r4"
+                      name="_Similarity_PostalCode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT De-Dupe.Paths[Flat File Source Output]"
+              endId="Package\DFT De-Dupe\Fuzzy Grouping.Inputs[Fuzzy Grouping Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT De-Dupe\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT De-Dupe.Paths[Fuzzy Grouping Output]"
+              endId="Package\DFT De-Dupe\Multicast.Inputs[Multicast Input 1]"
+              name="Fuzzy Grouping Output"
+              startId="Package\DFT De-Dupe\Fuzzy Grouping.Outputs[Fuzzy Grouping Output]" />
+            <path
+              refId="Package\DFT De-Dupe.Paths[Multicast Output 1]"
+              endId="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\DFT De-Dupe\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DFT De-Dupe.Paths[Multicast Output 2]"
+              endId="Package\DFT De-Dupe\CS Find Main Record.Inputs[Conditional Split Input]"
+              name="Multicast Output 2"
+              startId="Package\DFT De-Dupe\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DFT De-Dupe.Paths[No Match]"
+              endId="Package\DFT De-Dupe\OLE DB Stage.Inputs[OLE DB Destination Input]"
+              name="No Match"
+              startId="Package\DFT De-Dupe\CS Find Main Record.Outputs[Prime]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Truncate Staging 1"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2070BA99-B171-474A-9786-ADC6E922A508}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Truncate Staging 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"truncate table " +  @[User::TableName1]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}"
+          SQLTask:SqlStatementSource="truncate table stageReseller_FuzzyGrouping" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Truncate Staging 2"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B93FB321-73C6-4752-BDFE-DB2C107FA0ED}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Truncate Staging 2"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"truncate table " +  @[User::TableName2]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FE646EE2-D0FD-46E3-A816-0C0D345EC427}"
+          SQLTask:SqlStatementSource="truncate table stageReseller" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{3594F629-A22E-4DF8-A4CC-302F23520AA0}"
+      DTS:From="Package\SQL Truncate Staging 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT De-Dupe" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E401321F-C515-44C0-9297-E6645E81E6E7}"
+      DTS:From="Package\SQL Truncate Staging 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT De-Dupe" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="145,42"
+          Id="Package\DFT De-Dupe"
+          TopLeft="140.5,232.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SQL Truncate Staging 1"
+          TopLeft="28,132" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SQL Truncate Staging 2"
+          TopLeft="272,132" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="124.5,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.6666666666667,58.5"
+              Start="0,0"
+              End="65.6666666666667,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.7169167803547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.7169167803547"
+                    Point2="0,34.7169167803547"
+                    Point3="4,34.7169167803547" />
+                  <mssgle:LineSegment
+                    End="61.6666666666667,34.7169167803547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.6666666666667,34.7169167803547"
+                    Point2="65.6666666666667,34.7169167803547"
+                    Point3="65.6666666666667,38.7169167803547" />
+                  <mssgle:LineSegment
+                    End="65.6666666666667,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="368.5,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-132.666666666667,58.5"
+              Start="0,0"
+              End="-132.666666666667,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.7169167803547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.7169167803547"
+                    Point2="0,34.7169167803547"
+                    Point3="-4,34.7169167803547" />
+                  <mssgle:LineSegment
+                    End="-128.666666666667,34.7169167803547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-128.666666666667,34.7169167803547"
+                    Point2="-132.666666666667,34.7169167803547"
+                    Point3="-132.666666666667,38.7169167803547" />
+                  <mssgle:LineSegment
+                    End="-132.666666666667,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT De-Dupe">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\DFT De-Dupe\Multicast"
+          TopLeft="321.5,209.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\DFT De-Dupe\Flat File Source"
+          TopLeft="320,19" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\DFT De-Dupe\OLE DB Stage"
+          TopLeft="309,413.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DFT De-Dupe\Fuzzy Grouping"
+          TopLeft="305.5,107.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DFT De-Dupe\CS Find Main Record"
+          TopLeft="288,311.5" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping"
+          TopLeft="5.50000000000006,311.5" />
+        <EdgeLayout
+          Id="Package\DFT De-Dupe.Paths[No Match]"
+          TopLeft="379.75,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-12.03134765625,22.52685546875,24.0626953125,7.4462890625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT De-Dupe.Paths[Multicast Output 2]"
+          TopLeft="401.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.5,60"
+              Start="0,0"
+              End="-24.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4660194174757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4660194174757"
+                    Point2="0,24.4660194174757"
+                    Point3="-4,24.4660194174757" />
+                  <mssgle:LineSegment
+                    End="-20.5,24.4660194174757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.5,24.4660194174757"
+                    Point2="-24.5,24.4660194174757"
+                    Point3="-24.5,28.4660194174757" />
+                  <mssgle:LineSegment
+                    End="-24.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT De-Dupe.Paths[Multicast Output 1]"
+          TopLeft="363.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-247,60"
+              Start="0,0"
+              End="-247,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4660194174757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4660194174757"
+                    Point2="0,24.4660194174757"
+                    Point3="-4,24.4660194174757" />
+                  <mssgle:LineSegment
+                    End="-243,24.4660194174757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-243,24.4660194174757"
+                    Point2="-247,24.4660194174757"
+                    Point3="-247,28.4660194174757" />
+                  <mssgle:LineSegment
+                    End="-247,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT De-Dupe.Paths[Fuzzy Grouping Output]"
+          TopLeft="382.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT De-Dupe.Paths[Flat File Source Output]"
+          TopLeft="396.5,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14,46.5"
+              Start="0,0"
+              End="-14,39">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.25"
+                    Point2="0,23.25"
+                    Point3="-4,23.25" />
+                  <mssgle:LineSegment
+                    End="-10,23.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10,23.25"
+                    Point2="-14,23.25"
+                    Point3="-14,27.25" />
+                  <mssgle:LineSegment
+                    End="-14,39" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT De-Dupe\OLE DB Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT De-Dupe\OLE DB Stage Fuzzy Grouping">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

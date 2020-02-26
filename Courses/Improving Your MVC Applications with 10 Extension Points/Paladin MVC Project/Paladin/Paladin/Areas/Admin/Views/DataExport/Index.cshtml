@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="col-md-3">
+    <ul class="list-unstyled admin-menu">
+        <li>
+            @Html.ActionLink("Home", "Index", "Default")
+        </li>
+        <li>
+            @Html.ActionLink("Data Export", "Index", "Default", null, new { area = "Admin" })
+        </li>
+        <li>
+            @Html.ActionLink("Workflow", "Index", "Default")
+        </li>
+        <li>
+            @Html.ActionLink("Activity", "Index", "Default")
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <h2 class="page-header">Export Data</h2>
+    <p>Here you can export useful information from the database into CSV files.  Use them wisely!  If you have a request for an additional CSV, send us an email!</p>
+    <hr />
+    <h3>Applicant Quotes</h3>
+    <p>Get a basic list of the people who have filled out the quote forms. <br /><br /> @Html.ActionLink("Download CSV", "GetQuotesCSV", "DataExport", new { area = "admin" }, new { @class = "btn btn-primary" })</p>
+</div>

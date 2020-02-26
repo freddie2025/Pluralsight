@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ssis-adv-demo-m3", "ssis-adv-demo-m3\ssis-adv-demo-m3.dtproj", "{4A5D0C6A-8B70-4BE7-96BC-2FF3B3136F19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A5D0C6A-8B70-4BE7-96BC-2FF3B3136F19}.Development|Default.ActiveCfg = Development
+		{4A5D0C6A-8B70-4BE7-96BC-2FF3B3136F19}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
