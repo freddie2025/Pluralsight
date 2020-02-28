@@ -47,7 +47,7 @@ A repository for pluralsight course material and projects
 [Improving Your MVC Applications with 10 Extension Points](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Improving%20Your%20MVC%20Applications%20with%2010%20Extension%20Points)  
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
 ### Entity Framework Core
-[Entity Framework Core 2: Getting Started]()  
+[Entity Framework Core 2: Getting Started](https://github.com/freddie2025/Pluralsight/tree/master/Courses/EF%20Core%202%20Getting%20Started)  
 ### .NET Developer on Microsoft Azure Path
 [Microsoft Azure for .NET Developers - Building Secure Services and Applications](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Azure%20Building%20Secure%20Services%20and%20Applications)
 ### Domain-Driven Design
@@ -62,4 +62,4 @@ A repository for pluralsight course material and projects
 [Designing a Data Warehouse on the Microsoft SQL Server Platform](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Designing%20a%20Data%20Warehouse%20on%20the%20Microsoft%20SQL%20Server%20Platform)  
 [Advanced Integration Services](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Advanced%20Integration%20Services)  
 [Play by Play: Obliterate the Tedium - Practical VBA for the Excel Practitioner](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Obliterate%20the%20Tedium%20-%20Practical%20VBA%20for%20the%20Excel%20Practitioner)  
-[What's New in SQL Server 2016 Integration Services]()  
+[What's New in SQL Server 2016 Integration Services](https://github.com/freddie2025/Pluralsight/tree/master/Courses/What's%20New%20in%20SSIS%202016)  
