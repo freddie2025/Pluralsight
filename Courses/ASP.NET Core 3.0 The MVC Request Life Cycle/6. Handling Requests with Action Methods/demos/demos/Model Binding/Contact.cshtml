@@ -1,0 +1,22 @@
+﻿@model MvcSandbox.Controllers.Contact
+
+<h1 class="display-4">Contact Us</h1>
+<p>Let us know your thoughts.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <form asp-route="contact-us" method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input type="text" asp-for="Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Message"></label>
+                    <input type="text" asp-for="Message" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <p>@Html.ActionLink("Home", "Index", "Home")</p>
+    </div>
+</div>
