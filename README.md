@@ -46,6 +46,8 @@ A repository for pluralsight course material and projects
 ### ASP.NET MVC 5
 [Improving Your MVC Applications with 10 Extension Points](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Improving%20Your%20MVC%20Applications%20with%2010%20Extension%20Points)  
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
+### Entity Framework Core
+[Entity Framework Core 2: Getting Started]()  
 ### .NET Developer on Microsoft Azure Path
 [Microsoft Azure for .NET Developers - Building Secure Services and Applications](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Azure%20Building%20Secure%20Services%20and%20Applications)
 ### Domain-Driven Design
