@@ -1,0 +1,94 @@
+﻿@model NinjaDomain.Classes.Ninja
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ninja</h4>
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DateModified)
+        @Html.HiddenFor(model => model.DateCreated)
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ServedInOniwaban, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.ServedInOniwaban)
+                    @Html.ValidationMessageFor(model => model.ServedInOniwaban, "", new {@class = "text-danger"})
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClanId, "ClanId", htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.DropDownList("ClanId", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.ClanId, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.DateOfBirth, new {@Value = Model.DateOfBirth.ToString("MM/dd/yy")})
+                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+    <div>
+        @Html.ActionLink("New Equipment", "Create", "NinjaEquipments", new { ninjaId = Model.Id, name=Model.Name }, null)
+    </div>
+    <table width="300" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.EquipmentOwned) {
+
+        <tr>
+            <td width="100"> @item.Name</td>
+            <td width="100">@item.Type </td>
+            <td> @Html.ActionLink("Edit", "Edit", "NinjaEquipments", new { id = item.Id, ninjaId = Model.Id }, null)</td>
+        </tr>
+
+        }
+    </table>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

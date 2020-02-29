@@ -1,0 +1,87 @@
+﻿@model NinjaDomain.Classes.Ninja
+
+@{
+  ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ninja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clan.ClanName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clan.ClanName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServedInOniwaban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServedInOniwaban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+    </dl>
+    <table width="300" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.EquipmentOwned) {
+
+            <tr>
+                <td width="100"> @item.Name</td>
+                <td width="100">@item.Type </td>
+            </tr>
+        
+        }
+        </table>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateCreated)
+            </dd>
+
+            <dt>
+
+                @Html.DisplayNameFor(model => model.DateModified)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateModified)
+
+            </dd>
+
+        </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

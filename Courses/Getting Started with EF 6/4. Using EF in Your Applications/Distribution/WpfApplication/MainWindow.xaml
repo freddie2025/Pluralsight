@@ -1,0 +1,106 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfApplication"
+        xmlns:Classes="clr-namespace:NinjaDomain.Classes;assembly=NinjaDomain.Classes" x:Class="WpfApplication.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="522" Width="743" Loaded="Window_Loaded">
+
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="ninjaViewSource" />
+        <CollectionViewSource x:Key="ninjaEquipmentOwnedViewSource" Source="{Binding EquipmentOwned, Source={StaticResource ninjaViewSource}}"/>
+
+        <ObjectDataProvider x:Key="dataFromEnum"
+       MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="Classes:EquipmentType"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource baseStyle}"></Style>
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource baseStyle}"></Style>
+        <CollectionViewSource x:Key="ninjaViewSource1" d:DesignSource="{d:DesignInstance {x:Type Classes:Ninja}, CreateList=True}"/>
+        <CollectionViewSource x:Key="ninjaEquipmentOwnedViewSource1" Source="{Binding EquipmentOwned, Source={StaticResource ninjaViewSource1}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ninjaEquipmentOwnedViewSource}" Margin="0,0,0,2">
+        <Grid x:Name="grid1" DataContext="{StaticResource ninjaViewSource}" HorizontalAlignment="Left" Margin="10,198,0,-16" VerticalAlignment="Top" Width="373">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="132"/>
+                <ColumnDefinition Width="Auto" MinWidth="129"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Height="37" Width="67"/>
+            <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="30" Margin="61,10,-83,3" Grid.Row="0" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="304" Grid.ColumnSpan="2" TextChanged="nameTextBox_TextChanged"/>
+
+            <Label Content="Clan:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Width="53"/>
+            <ComboBox x:Name="clanComboBox" 
+                      DisplayMemberPath="ClanName" 
+                      HorizontalAlignment="Left" Height="28"
+                      ItemsSource="{Binding}" 
+                      SelectedValuePath="Id"
+                      SelectedValue="{Binding ElementName=ninjaListBox,
+                                        Path=SelectedItem.ClanId,Mode=OneWayToSource}"
+                      SelectionChanged="clanComboBox_SelectionChanged" 
+                      Margin="61,10,-85,18" Grid.Row="1" 
+                      VerticalAlignment="Center" Width="302" 
+                      Grid.ColumnSpan="2"  />
+            <Label Content="Date of Birth:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="4" VerticalAlignment="Center" Height="37" Width="129"/>
+            <DatePicker x:Name="dateOfBirthDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,9,-61,10" Grid.Row="4" SelectedDate="{Binding DateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Height="24" Width="190" FontSize="14.667" SelectedDateChanged="dateOfBirthDatePicker_SelectedDateChanged"/>
+            <Label Content="Served In Oniwaban:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,10,0,3" Grid.Row="8" VerticalAlignment="Center" Height="56" Width="196" Grid.ColumnSpan="2"/>
+            <CheckBox x:Name="servedInOniwabanCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Right" IsChecked="{Binding ServedInOniwaban, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="0,23,44,20" Grid.Row="8" VerticalAlignment="Center" Height="26" Width="20" Checked="servedInOniwabanCheckBox_Checked" Unchecked="servedInOniwabanCheckBox_Unchecked"/>
+        </Grid>
+        <ListBox x:Name="ninjaListBox" HorizontalAlignment="Left" Height="183" Margin="23,10,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="ninjaListBox_SelectionChanged" SelectedValuePath="Id" DisplayMemberPath="Name"/>
+        <Button x:Name="btnNewNinja" Margin="378,162,213,0" Content="New Ninja" Click="btnNewNinja_Click" Height="31" VerticalAlignment="Top" />
+        <DataGrid x:Name="equipmentOwnedDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" 
+                  ItemsSource="{Binding}" Margin="388,246,21,52.667" 
+                  RowDetailsVisibilityMode="VisibleWhenSelected" 
+                  CellEditEnding="equipmentOwnedDataGrid_CellEditEnding" 
+                
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader" Visibility="Hidden"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="6*"/>
+                <DataGridComboBoxColumn x:Name="equipTypeColumn"
+                                        SelectedItemBinding="{Binding Type}" 
+                                        ItemsSource="{Binding Source={StaticResource dataFromEnum}}"
+                                        Header="Type" Width="4*"/>
+                <!--<DataGridComboBoxColumn x:Name="equipTypeColumn" SelectedItemBinding="{Binding Type}" ItemsSource="{Binding}" Header="Type" Width="4*"/>-->
+
+                <!--<DataGridTemplateColumn x:Name="equipTypeColumn" Header="Type" Width="5*">
+                    <DataGridTemplateColumn.CellTemplate> 
+                        <DataTemplate>
+                            <ComboBox x:Name="cboEquipTypes" ItemsSource="{Binding equipTypes}">
+                                <ComboBoxItem Content="{Binding Type}"/>
+                                
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BtnSave" Content="Save" HorizontalAlignment="Left" Height="27" Margin="621,452,0,0" VerticalAlignment="Top" Width="104" Click="btnSave_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<template>
+    <require from="./date-format"></require>
+    <section>
+        </br>
+        <form role="form">
+            </br>
+            <label>
+                <strong>Name:</strong> </label>
+            <input value.bind="ninja.Name" />
+            <br/>
+
+            <label>
+                <strong>Clan:</strong> ${ninja.Clan.ClanName}
+            </label>
+
+            <br/>
+            <label>
+                <strong>Birthdate:</strong> </label>
+            <input value.bind="ninja.DateOfBirth | dateFormat" />
+           
+            <br/>
+            <label>
+                <label>
+                    <strong>Served in Oniwaban:</strong>
+                    <input type="checkbox" class="big-checkbox" checked.bind="ninja.ServedInOniwaban" ui-checkbox/>
+                    <br/>
+                    <label>Equipment:</label>
+                    <div class="row">
+                        <div style="font-weight:normal" class="relativePosition" repeat.for="equip of ninja.EquipmentOwned">
+                            ${equip.Name} ${equip.Type}
+                        </div>
+                        <label style="font-size:10pt" class="relativePosition">[TO DO: Add and Edit Equipment]</label>
+                    </div>
+                    <br/>
+                    <div class="button-bar">
+                        <button class="btn btn-success" click.delegate="save()">Save</button>
+                    </div>
+                    <br/>
+                    <hr style="height:2px;border:none;color:#333;background-color:#333;" />
+                    <label style="font-size:10pt">
+                        Created: ${ninja.DateCreated}
+                        <br/> Modified: ${ninja.DateModified}
+                    </label>
+    </section>
+</template>

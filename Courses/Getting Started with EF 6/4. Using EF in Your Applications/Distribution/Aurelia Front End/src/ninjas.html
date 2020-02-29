@@ -1,0 +1,36 @@
+﻿
+ <template>
+ <require from="./date-format"></require>
+  <section>
+
+    </br>
+      <form role="form">
+        <div class="form-group">
+          <div class="input-group">
+          <span class="input-group-btn">
+          <a href="#/insert" class="btn btn-default"><span class="glyphicon glyphicon-plus"
+                                                           aria-hidden="true"></span></a>
+          </span>
+            <input type="text" value.bind="searchEntry" class="form-control" id="id"
+                   placeholder="Search by First or Last name">
+          </div>
+        </div>
+        <button type="submit" click.delegate="retrieveNinjas()" disabled.bind="!canSearch" class="btn btn-default">Search</button>
+        <button type="submit" click.delegate="retrieveAllNinjas()" class="btn btn-primary">${textShowAll}</button>
+      </form>
+   
+      </br>
+
+      <div class="row">
+        <div  repeat.for="ninja of ninjas">
+          <a href="#/ninjas/${ninja.Id}" class="btn btn-default btn-sm" >
+            <span class="glyphicon glyphicon-pencil" /></a>
+          <a click.delegate="$parent.deleteView(ninja)" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-trash" /></a>
+            ${ninja.Name}  ${ninja.ServedInOniwaban ? '[Oniwaban]':''}    , Birthdate:${ninja.DateOfBirth | dateFormat}
+
+            
+        </div>
+      </div>
+ </section>
+</template>

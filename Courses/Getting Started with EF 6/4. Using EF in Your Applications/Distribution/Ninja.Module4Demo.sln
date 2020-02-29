@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23103.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaDomain.Classes", "Ninja.DomainClasses\NinjaDomain.Classes.csproj", "{7073F7FE-F900-4BDD-8B10-6BC3D88302D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaDomain.DataModel", "NinjaDomain.DataModel\NinjaDomain.DataModel.csproj", "{45E2E512-EE42-4D8E-AB18-3C66E0644B7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{68C8C012-F034-48C4-8EF0-CBEA747A1C74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF Application", "WPF Application", "{6BA785DE-60FF-420D-94B9-45274B631127}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC5", "MVC5", "{08471F7B-8850-48B9-B097-8B5F2065EE8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web API", "Web API", "{8704BBBC-2EA6-42EF-A0A1-E39C56D6C676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication", "WpfApplication\WpfApplication.csproj", "{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAppNinjaOnly", "MVCApp\MVCAppNinjaOnly.csproj", "{F2A84553-C570-4EA1-B0BB-B9069BDE50A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAppRepository", "MVCApp Repository\MVCAppRepository.csproj", "{0404AE1B-573E-4123-BF51-E8D671C2A6F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{6B45C96E-6B98-42A1-B00C-5891CC9C643B}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Aurelia Front End(1)", "Aurelia Front End\", "{DDE76968-6DF2-42B9-8894-4675AB16428C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_25427"
+		Debug.AspNetCompiler.PhysicalPath = "Aurelia Front End\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_25427\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_25427"
+		Release.AspNetCompiler.PhysicalPath = "Aurelia Front End\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_25427\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "25427"
+		SlnRelativePath = "Aurelia Front End\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7073F7FE-F900-4BDD-8B10-6BC3D88302D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7073F7FE-F900-4BDD-8B10-6BC3D88302D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7073F7FE-F900-4BDD-8B10-6BC3D88302D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7073F7FE-F900-4BDD-8B10-6BC3D88302D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E2E512-EE42-4D8E-AB18-3C66E0644B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E2E512-EE42-4D8E-AB18-3C66E0644B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E2E512-EE42-4D8E-AB18-3C66E0644B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E2E512-EE42-4D8E-AB18-3C66E0644B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C8C012-F034-48C4-8EF0-CBEA747A1C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C8C012-F034-48C4-8EF0-CBEA747A1C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C8C012-F034-48C4-8EF0-CBEA747A1C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C8C012-F034-48C4-8EF0-CBEA747A1C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2A84553-C570-4EA1-B0BB-B9069BDE50A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A84553-C570-4EA1-B0BB-B9069BDE50A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A84553-C570-4EA1-B0BB-B9069BDE50A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A84553-C570-4EA1-B0BB-B9069BDE50A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0404AE1B-573E-4123-BF51-E8D671C2A6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0404AE1B-573E-4123-BF51-E8D671C2A6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0404AE1B-573E-4123-BF51-E8D671C2A6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0404AE1B-573E-4123-BF51-E8D671C2A6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B45C96E-6B98-42A1-B00C-5891CC9C643B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B45C96E-6B98-42A1-B00C-5891CC9C643B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B45C96E-6B98-42A1-B00C-5891CC9C643B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B45C96E-6B98-42A1-B00C-5891CC9C643B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE76968-6DF2-42B9-8894-4675AB16428C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE76968-6DF2-42B9-8894-4675AB16428C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE76968-6DF2-42B9-8894-4675AB16428C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE76968-6DF2-42B9-8894-4675AB16428C}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3BBBD035-2B94-4CD6-8A4B-1570CBAF4EFB} = {6BA785DE-60FF-420D-94B9-45274B631127}
+		{F2A84553-C570-4EA1-B0BB-B9069BDE50A0} = {08471F7B-8850-48B9-B097-8B5F2065EE8E}
+		{0404AE1B-573E-4123-BF51-E8D671C2A6F6} = {08471F7B-8850-48B9-B097-8B5F2065EE8E}
+		{6B45C96E-6B98-42A1-B00C-5891CC9C643B} = {8704BBBC-2EA6-42EF-A0A1-E39C56D6C676}
+		{DDE76968-6DF2-42B9-8894-4675AB16428C} = {8704BBBC-2EA6-42EF-A0A1-E39C56D6C676}
+	EndGlobalSection
+EndGlobal
