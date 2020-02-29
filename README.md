@@ -46,6 +46,8 @@ A repository for pluralsight course material and projects
 ### ASP.NET MVC 5
 [Improving Your MVC Applications with 10 Extension Points](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Improving%20Your%20MVC%20Applications%20with%2010%20Extension%20Points)  
 [Getting Started with ASP.NET SignalR](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20ASP.NET%20SignalR)  
+### Entity Framework 6
+[Getting Started with Entity Framework 6](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20EF%206)  
 ### Entity Framework Core
 [Entity Framework Core 2: Getting Started](https://github.com/freddie2025/Pluralsight/tree/master/Courses/EF%20Core%202%20Getting%20Started)  
 ### .NET Developer on Microsoft Azure Path
