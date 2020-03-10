@@ -38,6 +38,9 @@ A repository for pluralsight course material and projects
 [Getting Started with Dependency Injection in .NET](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20Dependency%20Injection%20in%20.NET)  
 ### C# Coding Practices
 [SOLID Principles for C# Developers](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SOLID%20Principles%20for%20C%23%20Developers)  
+### Design Patterns in C# Path
+#### Behavioral
+[C# Design Patterns: State](https://github.com/freddie2025/Pluralsight/tree/master/Courses/C%23%20Design%20Patterns%20State/The%20State%20Design%20Pattern)  
 ### Microsoft Power BI for Analysts
 [Building Your First Power BI Report](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20Power%20BI%20Report)  
 [Getting Started with DAX Formulas in Power BI, Power Pivot, and SSAS](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Getting%20Started%20with%20DAX%20Formulas)  
