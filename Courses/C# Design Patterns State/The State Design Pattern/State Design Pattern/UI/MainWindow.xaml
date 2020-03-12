@@ -1,0 +1,65 @@
+﻿<Window x:Class="State_Design_Pattern.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:State_Design_Pattern.UI"
+        mc:Ignorable="d"
+       Title="Event Registration" ResizeMode="NoResize"  Height="450" Width="800"
+        Background="LightGray" WindowStartupLocation="CenterScreen">
+    <Border Padding="10">
+        <StackPanel>
+
+            <StackPanel Height="60" Background="CadetBlue">
+                <Grid x:Name="grdDetails"  Visibility="Hidden" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="97*" />
+                        <ColumnDefinition Width="446*" />
+                        <ColumnDefinition Width="121*" />
+                        <ColumnDefinition Width="110*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Booking ID:"  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0"/>
+                    <Label Name="lblBookingID" Content=""  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" />
+
+                    <Label Content="Current State:"  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0"/>
+                    <Label Name="lblCurrentState" Content=""  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Foreground="Red" />
+
+                    <Label Content="Attendee Name:"  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="2" />
+                    <Label Name="lblAttendee" Content=""  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3"/>
+
+                    <Label Content="Tickets:"  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" />
+                    <Label Name="lblTicketCount" Content=""  FontWeight="Bold" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="3" />
+
+
+
+                </Grid>
+            </StackPanel>
+
+            <Frame x:Name="Main" Height="290" NavigationUIVisibility="Hidden" Background="White" Margin="0,10"/>
+
+            <Grid VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"  Name="btnCreate" Content="New Booking" Click="btnCreate_Click"/>
+                <Button Margin="10 0 10 0" Grid.Column="1"   Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"/>
+                <Button Margin="0 0 10 0" Grid.Column="2"  Name="btnCancel" Content="Cancel" Click="btnCancel_Click"/>
+                <Button Grid.Column="3"   Name="btnDatePassed" Content="Date Passed" Click="btnDatePassed_Click"/>
+
+
+            </Grid>
+        </StackPanel>
+    </Border>
+
+</Window>
