@@ -1,0 +1,83 @@
+﻿<Window x:Class="ShoppingCart.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShoppingCart.Windows"
+        mc:Ignorable="d"
+        FontSize="20"
+        WindowStartupLocation="CenterScreen"
+        Title="Shopping" Height="500" Width="1200">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"><Bold>Shopping Cart</Bold></TextBlock>
+            <ListBox Grid.Row="1" ItemsSource="{Binding LineItems}" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="110" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock TextAlignment="Left" Text="{Binding Product.ArticleId}" />
+                            <TextBlock TextAlignment="Left" Grid.Column="1" Text="{Binding Product.Name}" />
+                            <TextBlock TextAlignment="Left" Grid.Column="2" Text="{Binding Product.Price, StringFormat=${0}}" />
+                            <TextBlock TextAlignment="Left" Grid.Column="3" Text="{Binding Quantity}" />
+                            <Button Width="20" Grid.Column="4" CommandParameter="{Binding Product}" Command="{Binding IncreaseQuantityCommand}">+</Button>
+                            <Button Width="20" Grid.Column="5" CommandParameter="{Binding Product}" Command="{Binding DecreaseQuantityCommand}">-</Button>
+                            <Button Width="90" Grid.Column="6" CommandParameter="{Binding Product}" Command="{Binding RemoveFromCartCommand}">Remove</Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Margin="0 5 5 0" Command="{Binding RemoveAllFromCartCommand}">Clear</Button>
+                <Button Margin="0 5 0 0" Grid.Column="1" Command="{Binding CheckoutCommand}" Background="Green">Checkout</Button>
+            </Grid>
+        </Grid>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding Products}" HorizontalContentAlignment="Stretch" Margin="10 0 10 0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock TextAlignment="Left" Text="{Binding Product.ArticleId}" />
+                        <TextBlock TextAlignment="Left" Grid.Column="1" Text="{Binding Product.Name}" />
+                        <TextBlock TextAlignment="Left" Grid.Column="2" Text="{Binding Product.Price, StringFormat=${0}}" />
+                        <Button Grid.Column="3" Command="{Binding AddToCartCommand}">+</Button>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"><Bold>Products</Bold></TextBlock>
+    </Grid>
+</Window>
