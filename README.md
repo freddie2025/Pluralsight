@@ -64,6 +64,8 @@ A repository for pluralsight course material and projects
 [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
 ### Typescript Core Language Path
 [TypeScript: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/TypeScript%20The%20Big%20Picture)  
+### Microsoft Excel Programming
+[Building Your First VBA Module](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20VBA%20Module)  
 
 ## Courses
 [SQL Server Reporting Services Playbook](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SQL%20Server%20Reporting%20Services%20Playbook)  
