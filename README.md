@@ -65,6 +65,7 @@ A repository for pluralsight course material and projects
 ### Typescript Core Language Path
 [TypeScript: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/TypeScript%20The%20Big%20Picture)  
 ### Microsoft Excel Programming
+[Developing for Excel with VBA](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Developing%20for%20Excel%20with%20VBA)  
 [Building Your First VBA Module](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20VBA%20Module)  
 
 ## Courses
