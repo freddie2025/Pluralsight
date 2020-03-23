@@ -64,6 +64,7 @@ A repository for pluralsight course material and projects
 [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
 ### JavaScript Core Language Path
 [JavaScript: Getting Started](https://github.com/freddie2025/Pluralsight/tree/master/Courses/JavaScript%20Getting%20Started)  
+[JavaScript Arrays and Collections](https://github.com/freddie2025/Pluralsight/tree/master/Courses/JavaScript%20Arrays%20and%20Collections)  
 ### Typescript Core Language Path
 [TypeScript: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/TypeScript%20The%20Big%20Picture)  
 ### Microsoft Excel Programming
