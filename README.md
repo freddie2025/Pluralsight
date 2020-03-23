@@ -62,6 +62,8 @@ A repository for pluralsight course material and projects
 [Clean Architecture Patterns, Practices, and Principles](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Clean%20Architecture%20Patterns%2C%20Practices%2C%20and%20Principles)  
 [Modern Software Architecture: Domain Models, CQRS, and Event Sourcing]()  
 [CQRS in Practice](https://github.com/freddie2025/Pluralsight/tree/master/Courses/CQRS%20in%20Practice)  
+### JavaScript Core Language Path
+[JavaScript: Getting Started](https://github.com/freddie2025/Pluralsight/tree/master/Courses/JavaScript%20Getting%20Started)  
 ### Typescript Core Language Path
 [TypeScript: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/TypeScript%20The%20Big%20Picture)  
 ### Microsoft Excel Programming
