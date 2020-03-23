@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dollar2" fill="#ABC4BF" fill-rule="nonzero">
+            <path d="M12,0 C5.373,0 0,5.373 0,12 C0,18.627 5.373,24 12,24 C18.627,24 24,18.627 24,12 C24,5.373 18.627,0 12,0 Z M13,16.947 L13,18 L12,18 L12,17.002 C10.965,16.984 9.894,16.737 9,16.275 L9.455,14.631 C10.411,15.002 11.684,15.396 12.68,15.171 C13.829,14.911 14.064,13.729 12.794,13.16 C11.863,12.726 9.016,12.355 9.016,9.917 C9.016,8.554 10.055,7.334 12,7.067 L12,6 L13,6 L13,7.018 C13.724,7.037 14.536,7.163 15.442,7.438 L15.08,9.085 C14.312,8.815 13.463,8.57 12.637,8.62 C11.148,8.707 11.017,9.996 12.056,10.536 C13.768,11.341 16,11.938 16,14.083 C16.002,15.801 14.657,16.715 13,16.947 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
