@@ -71,6 +71,8 @@ A repository for pluralsight course material and projects
 ### Microsoft Excel Programming
 [Developing for Excel with VBA](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Developing%20for%20Excel%20with%20VBA)  
 [Building Your First VBA Module](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Building%20Your%20First%20VBA%20Module)  
+### React
+[React: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/React%20The%20Big%20Picture)  
 
 ## Courses
 [SQL Server Reporting Services Playbook](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SQL%20Server%20Reporting%20Services%20Playbook)  
