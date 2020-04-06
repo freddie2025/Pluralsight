@@ -74,6 +74,8 @@ A repository for pluralsight course material and projects
 ### React
 [React: The Big Picture](https://github.com/freddie2025/Pluralsight/tree/master/Courses/React%20The%20Big%20Picture)  
 [React: Getting Started](https://github.com/freddie2025/Pluralsight/tree/master/Courses/React%20Getting%20Started)  
+### Upgrading Your Technology Career Path
+[Onboard Yourself: What to Do After You Land Your Dream Job](https://github.com/freddie2025/Pluralsight/tree/master/Courses/Onboard%20Yourself%20What%20to%20Do%20After%20You%20Land%20Your%20Dream%20Job)  
 
 ## Courses
 [SQL Server Reporting Services Playbook](https://github.com/freddie2025/Pluralsight/tree/master/Courses/SQL%20Server%20Reporting%20Services%20Playbook)  
